@@ -1,23 +1,33 @@
+use [BirdMeal]
+CREATE TABLE [Wallets] (
+  [walletId] int PRIMARY KEY IDENTITY(1,1),
+  [balance] float,
+  [transactionDate] date
+)
+GO
+
+CREATE TABLE [Meals] (
+  [mealID] int PRIMARY KEY IDENTITY(1,1),
+  [description] nvarchar,
+  [routingTime] nvarchar(255),
+  [totalCost] float
+)
+GO
+
 CREATE TABLE [Products] (
-  [productID] int,
+  [productID] int PRIMARY KEY IDENTITY(1,1),
   [productName] nvarchar,
   [price] float,
   [quantity] int,
   [description] nvarchar,
   [status] bit,
-  [weight] float
-)
-GO
-
-CREATE TABLE [Meal_Product] (
-  [mealID] int,
-  [productID] int,
-  [quantity] int
+  [weight] float,
+ 
 )
 GO
 
 CREATE TABLE [Users] (
-  [userID] int,
+  [userID] int PRIMARY KEY IDENTITY(1,1),
   [userName] nvarchar(255),
   [password] nvarchar(255),
   [fullName] nvarchar,
@@ -25,57 +35,35 @@ CREATE TABLE [Users] (
   [phone] nvarchar(255),
   [address] nvarchar,
   [role] nvarchar(255),
-  [walletId] int
+  [walletId] int UNIQUE FOREIGN KEY REFERENCES [Wallets]([walletId])
 )
 GO
 
-CREATE TABLE [Meals] (
-  [mealID] int,
-  [description] nvarchar,
-  [routingTime] nvarchar(255),
-  [totalCost] float
-)
-GO
+
 
 CREATE TABLE [Orders] (
-  [orderID] int,
-  [userID] int,
+  [orderID] int PRIMARY KEY IDENTITY(1,1),
+  [userID] int FOREIGN KEY REFERENCES [Users]([userID]),
   [orderDate] date,
   [totalPrice] float,
   [status] nvarchar
 )
 GO
 
+
 CREATE TABLE [Order_Details] (
-  [orderDetailID] int,
-  [orderID] int,
-  [mealID] int,
+  [orderDetailID] int PRIMARY KEY IDENTITY(1,1),
+  [orderID] int FOREIGN KEY REFERENCES [Orders]([orderID]),
+  [mealID] int FOREIGN KEY REFERENCES [Meals]([mealID]),
   [quantity] int,
   [unitPrice] float
 )
 GO
 
-CREATE TABLE [Wallets] (
-  [walletId] int,
-  [balance] float,
-  [transactionDate] date
+
+CREATE TABLE [Meal_Product] (
+  [mealID] int FOREIGN KEY REFERENCES [Meals]([mealID]),
+  [productID] int  FOREIGN KEY REFERENCES [Products]([productID]),
+  [quantity] int
 )
-GO
-
-ALTER TABLE [Meal_Product] ADD FOREIGN KEY ([mealID]) REFERENCES [Meals] ([mealID])
-GO
-
-ALTER TABLE [Meal_Product] ADD FOREIGN KEY ([productID]) REFERENCES [Products] ([productID])
-GO
-
-ALTER TABLE [Order_Details] ADD FOREIGN KEY ([mealID]) REFERENCES [Meals] ([mealID])
-GO
-
-ALTER TABLE [Orders] ADD FOREIGN KEY ([userID]) REFERENCES [Users] ([userID])
-GO
-
-ALTER TABLE [Order_Details] ADD FOREIGN KEY ([orderID]) REFERENCES [Orders] ([orderID])
-GO
-
-ALTER TABLE [Wallets] ADD FOREIGN KEY ([walletId]) REFERENCES [Users] ([walletId])
 GO
