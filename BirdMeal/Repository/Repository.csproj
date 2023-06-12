@@ -10,7 +10,6 @@
     <Folder Include="BillRepository\" />
     <Folder Include="MealRepository\" />
     <Folder Include="MealProductRepository\" />
-    <Folder Include="WalletRepository\" />
     <Folder Include="OrderDetailRepository\" />
     <Folder Include="OrderRepository\" />
     <Folder Include="ProductRepository\" />

@@ -11,5 +11,9 @@ namespace Repository.UserRepository
     {
         public IEnumerable<User> GetUsersList();
         public User Login(string email, string password);
+        public User GetUserById(int userId);
+        public User GetUserByEmail(string email);
+        public void AddUser(User c);
+
     }
 }

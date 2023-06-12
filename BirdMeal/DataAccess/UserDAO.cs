@@ -54,7 +54,7 @@ namespace DataAccess
             return user;
         }
 
-        public User GetUser(int userId)
+        public User GetUserById(int userId)
         {
             User cus = null;
 
@@ -94,28 +94,22 @@ namespace DataAccess
 
         public void AddUser(User c)
         {
-            if (c == null)
-            {
-                throw new Exception("User is not ton tai!!");
-            }
+
             try
             {
-                if (GetUser(c.UserId) == null)
-                {
-                    var context = new BirdMealContext();
-                    context.Users.Add(c);
-                    context.SaveChanges();
-                }
-                else
-                {
-                    MessageBox.Show("User ton tai roi!!");
-                }
+                var context = new BirdMealContext();
+                context.Users.Add(c);
+                context.SaveChanges();
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
         }
+
+
+
+
     }
 
 }
