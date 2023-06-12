@@ -12,7 +12,6 @@
     <Folder Include="MealProductRepository\" />
     <Folder Include="OrderDetailRepository\" />
     <Folder Include="OrderRepository\" />
-    <Folder Include="ProductRepository\" />
   </ItemGroup>
 
   <ItemGroup>
