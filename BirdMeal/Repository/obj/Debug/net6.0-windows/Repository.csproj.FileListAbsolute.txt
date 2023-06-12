@@ -10,3 +10,8 @@ F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\Bird
 F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\Repository\obj\Debug\net6.0-windows\refint\Repository.dll
 F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\Repository\obj\Debug\net6.0-windows\Repository.pdb
 F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\Repository\obj\Debug\net6.0-windows\ref\Repository.dll
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\Repository\bin\Debug\net6.0-windows\BusinessObjects.dll
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\Repository\bin\Debug\net6.0-windows\DataAccess.dll
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\Repository\bin\Debug\net6.0-windows\BusinessObjects.pdb
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\Repository\bin\Debug\net6.0-windows\DataAccess.pdb
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\Repository\obj\Debug\net6.0-windows\Repository.csproj.CopyComplete

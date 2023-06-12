@@ -66,7 +66,7 @@ namespace BusinessObjects.Models
                 entity.Property(e => e.MealId).HasColumnName("mealID");
 
                 entity.Property(e => e.Description)
-                    .HasMaxLength(1)
+                    .HasMaxLength(4000)
                     .HasColumnName("description");
 
                 entity.Property(e => e.RoutingTime)
@@ -104,11 +104,11 @@ namespace BusinessObjects.Models
                 entity.Property(e => e.OrderId).HasColumnName("orderID");
 
                 entity.Property(e => e.OrderDate)
-                    .HasColumnType("date")
+                    .HasColumnType("datetime")
                     .HasColumnName("orderDate");
 
                 entity.Property(e => e.Status)
-                    .HasMaxLength(1)
+                    .HasMaxLength(255)
                     .HasColumnName("status");
 
                 entity.Property(e => e.TotalPrice).HasColumnName("totalPrice");
@@ -144,13 +144,13 @@ namespace BusinessObjects.Models
                 entity.Property(e => e.ProductId).HasColumnName("productID");
 
                 entity.Property(e => e.Description)
-                    .HasMaxLength(1)
+                    .HasMaxLength(4000)
                     .HasColumnName("description");
 
                 entity.Property(e => e.Price).HasColumnName("price");
 
                 entity.Property(e => e.ProductName)
-                    .HasMaxLength(1)
+                    .HasMaxLength(255)
                     .HasColumnName("productName");
 
                 entity.Property(e => e.Quantity).HasColumnName("quantity");
@@ -162,13 +162,13 @@ namespace BusinessObjects.Models
 
             modelBuilder.Entity<User>(entity =>
             {
-                entity.HasIndex(e => e.WalletId, "UQ__Users__3785C871E33C318A")
+                entity.HasIndex(e => e.WalletId, "UQ__Users__3785C871BE536A5E")
                     .IsUnique();
 
                 entity.Property(e => e.UserId).HasColumnName("userID");
 
                 entity.Property(e => e.Address)
-                    .HasMaxLength(1)
+                    .HasMaxLength(255)
                     .HasColumnName("address");
 
                 entity.Property(e => e.Email)
@@ -176,7 +176,7 @@ namespace BusinessObjects.Models
                     .HasColumnName("email");
 
                 entity.Property(e => e.FullName)
-                    .HasMaxLength(1)
+                    .HasMaxLength(255)
                     .HasColumnName("fullName");
 
                 entity.Property(e => e.Password)
@@ -190,10 +190,6 @@ namespace BusinessObjects.Models
                 entity.Property(e => e.Role)
                     .HasMaxLength(255)
                     .HasColumnName("role");
-
-                entity.Property(e => e.UserName)
-                    .HasMaxLength(255)
-                    .HasColumnName("userName");
 
                 entity.Property(e => e.WalletId).HasColumnName("walletId");
 
@@ -210,7 +206,7 @@ namespace BusinessObjects.Models
                 entity.Property(e => e.Balance).HasColumnName("balance");
 
                 entity.Property(e => e.TransactionDate)
-                    .HasColumnType("date")
+                    .HasColumnType("datetime")
                     .HasColumnName("transactionDate");
             });
 

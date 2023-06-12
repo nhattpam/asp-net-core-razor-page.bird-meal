@@ -10,3 +10,6 @@ F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\Bird
 F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\DataAccess\obj\Debug\net6.0-windows\refint\DataAccess.dll
 F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\DataAccess\obj\Debug\net6.0-windows\DataAccess.pdb
 F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\DataAccess\obj\Debug\net6.0-windows\ref\DataAccess.dll
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\DataAccess\bin\Debug\net6.0-windows\BusinessObjects.dll
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\DataAccess\bin\Debug\net6.0-windows\BusinessObjects.pdb
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\DataAccess\obj\Debug\net6.0-windows\DataAccess.csproj.CopyComplete
