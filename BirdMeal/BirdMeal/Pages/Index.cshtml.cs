@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Windows;
 
 namespace BirdMeal.Pages
 {
@@ -14,7 +15,16 @@ namespace BirdMeal.Pages
 
         public void OnGet()
         {
-
+            if((HttpContext.Session.GetString("loginMemId") != null))
+                {
+                int userId = Int32.Parse(HttpContext.Session.GetString("loginMemId"));
+                if (userId != null)
+                {
+                    MessageBox.Show(userId.ToString());
+                }
+            }
+            
+            
         }
     }
 }
