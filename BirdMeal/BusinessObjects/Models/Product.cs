@@ -17,6 +17,7 @@ namespace BusinessObjects.Models
         public string? Description { get; set; }
         public bool? Status { get; set; }
         public double? Weight { get; set; }
+        public string? Image { get; set; }
 
         public virtual ICollection<MealProduct> MealProducts { get; set; }
     }
