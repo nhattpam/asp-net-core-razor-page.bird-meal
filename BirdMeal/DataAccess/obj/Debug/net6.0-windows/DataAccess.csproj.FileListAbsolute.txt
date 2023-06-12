@@ -1,0 +1,12 @@
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\DataAccess\bin\Debug\net6.0-windows\DataAccess.deps.json
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\DataAccess\bin\Debug\net6.0-windows\DataAccess.dll
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\DataAccess\bin\Debug\net6.0-windows\DataAccess.pdb
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\DataAccess\obj\Debug\net6.0-windows\DataAccess.csproj.AssemblyReference.cache
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\DataAccess\obj\Debug\net6.0-windows\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\DataAccess\obj\Debug\net6.0-windows\DataAccess.AssemblyInfoInputs.cache
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\DataAccess\obj\Debug\net6.0-windows\DataAccess.AssemblyInfo.cs
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\DataAccess\obj\Debug\net6.0-windows\DataAccess.csproj.CoreCompileInputs.cache
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\DataAccess\obj\Debug\net6.0-windows\DataAccess.dll
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\DataAccess\obj\Debug\net6.0-windows\refint\DataAccess.dll
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\DataAccess\obj\Debug\net6.0-windows\DataAccess.pdb
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\DataAccess\obj\Debug\net6.0-windows\ref\DataAccess.dll

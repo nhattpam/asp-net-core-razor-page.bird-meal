@@ -1,0 +1,12 @@
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\Repository\bin\Debug\net6.0-windows\Repository.deps.json
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\Repository\bin\Debug\net6.0-windows\Repository.dll
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\Repository\bin\Debug\net6.0-windows\Repository.pdb
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\Repository\obj\Debug\net6.0-windows\Repository.csproj.AssemblyReference.cache
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\Repository\obj\Debug\net6.0-windows\Repository.GeneratedMSBuildEditorConfig.editorconfig
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\Repository\obj\Debug\net6.0-windows\Repository.AssemblyInfoInputs.cache
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\Repository\obj\Debug\net6.0-windows\Repository.AssemblyInfo.cs
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\Repository\obj\Debug\net6.0-windows\Repository.csproj.CoreCompileInputs.cache
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\Repository\obj\Debug\net6.0-windows\Repository.dll
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\Repository\obj\Debug\net6.0-windows\refint\Repository.dll
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\Repository\obj\Debug\net6.0-windows\Repository.pdb
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\Repository\obj\Debug\net6.0-windows\ref\Repository.dll
