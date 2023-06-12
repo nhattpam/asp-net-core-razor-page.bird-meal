@@ -12,9 +12,4 @@
     <ProjectReference Include="..\ViewModel\ViewModel.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Pages\Admins\" />
-    <Folder Include="Pages\Staffs\" />
-  </ItemGroup>
-
 </Project>

@@ -43,13 +43,13 @@ namespace BirdMeal.Pages
                     {
                         HttpContext.Session.SetString("loginMem", dto.FullName);
                         HttpContext.Session.SetString("loginMemId", dto.UserId.ToString());
-                        return RedirectToPage("./AdminScreen");
+                        return RedirectToPage("Admins/Index");
                     }
                     else if (dto.Role.Equals("STAFF"))
                     {
                         HttpContext.Session.SetString("loginMem", dto.FullName);
                         HttpContext.Session.SetString("loginMemId", dto.UserId.ToString());
-                        return RedirectToPage("./StaffScreen");
+                        return RedirectToPage("Staffs/Index");
                     }
                     else
                     {

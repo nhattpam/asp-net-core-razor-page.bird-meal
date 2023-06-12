@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirdMeal", "BirdMeal\BirdMeal.csproj", "{71D544C4-1C6C-4982-99BC-89A95DA1641E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BirdMeal", "BirdMeal\BirdMeal.csproj", "{71D544C4-1C6C-4982-99BC-89A95DA1641E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessObjects", "BusinessObjects\BusinessObjects.csproj", "{860DEA88-A20B-469F-9F03-78AE447AC683}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessObjects", "BusinessObjects\BusinessObjects.csproj", "{860DEA88-A20B-469F-9F03-78AE447AC683}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{56E9F51A-FAAE-4426-8091-B2F385285AED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{56E9F51A-FAAE-4426-8091-B2F385285AED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{9CB9BB67-477B-4633-BF05-4552DB2FA897}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{9CB9BB67-477B-4633-BF05-4552DB2FA897}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModel", "ViewModel\ViewModel.csproj", "{B4CABB26-3ADE-4DA1-BF4B-DFB0980BD900}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViewModel", "ViewModel\ViewModel.csproj", "{B4CABB26-3ADE-4DA1-BF4B-DFB0980BD900}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
