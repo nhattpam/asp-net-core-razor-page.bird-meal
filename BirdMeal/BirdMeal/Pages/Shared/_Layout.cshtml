@@ -42,23 +42,52 @@
 					</fieldset>
 				</form>
 			</div>
-			<div class="w3l_header_right">
+			@*<div class="w3l_header_right">
 				<ul>
 					<li class="dropdown profile_details_drop">
-						if(@Context.Session.GetString("loginMemName") != null){
-						@Context.Session.GetString("loginMemName")
-						}else{
-						<a href="/Login"><i class="fa fa-user" aria-hidden="true"></i></a>
+						@if (Context.Session.GetString("loginMemName") != null)
+						{
+							<span>@Context.Session.GetString("loginMemName")</span>
 						}
-						
-						
+						else
+						{
+							<a href="/Login"><i class="fa fa-user" aria-hidden="true"></i></a>
+						}
 					</li>
 				</ul>
-			</div>
+			</div>*@
+			<!-- Example split danger button -->
+			@if (Context.Session.GetString("loginMemName") != null)
+			{
+				<div class="w3l_header_right">
+					<div class="dropdown">
+						<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown"><span>@Context.Session.GetString("loginMemName")</span></a>
+						<div class="dropdown-menu">
+							<a href="#" class="dropdown-item">My Order</a>
+							<a href="#" class="dropdown-item">My Profile</a>
+							<a href="/Logout" class="dropdown-item">Logout</a>
+						</div>
+					</div>
+				</div>
+			}
+			else
+			{
+				<div class="w3l_header_right">
+			<ul>
+				<li class="dropdown profile_details_drop">
+					<a href="/Login"><i class="fa fa-user" aria-hidden="true"></i> Sign In</a>
+				</li>
+			</ul>
+		</div>
+				
+				<div class="w3l_header_right1">
+					<h2><a href="/Register">Register</a></h2>
+				</div>
+			}
 			
-			<div class="w3l_header_right1">
-				<h2><a href="/Register">Register</a></h2>
-			</div>
+
+
+			
 			<div class="clearfix"> </div>
 		</div>
 		<!-- script-for sticky-nav -->
