@@ -31,18 +31,24 @@
                     <td>@item.Price</td>
                     <td>@item.Quantity</td>
                     <td>@item.Description</td>
-                    @if (item.Status == false)
-                    {
-                        <td>
-                            Inactive
-                        </td>
-                    }
-                    else
-                    {
-                        <td>
-                            Active
-                        </td>
-                    }
+
+                    <td>
+                        @if (item.Status.HasValue)
+                        {
+                            if (item.Status.Value)
+                            {
+                                <text>Active</text>
+                            }
+                            else
+                            {
+                                <text>Inactive</text>
+                            }
+                        }
+                        else
+                        {
+                            <text>N/A</text>
+                        }
+                    </td>
 
                             
                     <td>@item.Weight</td>

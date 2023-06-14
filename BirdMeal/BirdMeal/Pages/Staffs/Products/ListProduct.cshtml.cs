@@ -50,7 +50,8 @@ namespace BirdMeal.Pages.Staffs.Products
                 Quantity = pro.Quantity,
                 Description = pro.Description,
                 Weight = pro.Weight,
-                Image = pro.Image
+                Image = pro.Image,
+                Status = pro.Status
             });
 
             return dtos;
