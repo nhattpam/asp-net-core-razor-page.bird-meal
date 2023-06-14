@@ -1,4 +1,5 @@
 ﻿using BusinessObjects.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,7 +47,30 @@ namespace DataAccess
 
 			return products;
 		}
-	}
+
+        public bool AddProduct(Product product)
+        {
+            if (product == null)
+                throw new ArgumentNullException(nameof(product));
+
+            try
+            {
+                using (var context = new BirdMealContext())
+                {
+                    context.Products.Add(product);
+                    context.SaveChanges();
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred while adding the product: {ex.Message}");
+                return false;
+            }
+        }
+
+    }
 
 
 }

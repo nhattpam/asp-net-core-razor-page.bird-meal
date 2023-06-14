@@ -10,5 +10,7 @@ namespace Repository.ProductRepository
 	public interface IProductRepository
 	{
 		public IEnumerable<Product> GetProductList();
+
+		public bool AddProduct(Product product);
 	}
 }
