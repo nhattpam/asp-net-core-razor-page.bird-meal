@@ -41,18 +41,21 @@ namespace BirdMeal.Pages
 
                     if (dto.Role.Equals("ADMIN"))
                     {
+                        HttpContext.Session.SetString("loginMemName", dto.FullName);
                         HttpContext.Session.SetString("loginMem", dto.Email);
                         HttpContext.Session.SetString("loginMemId", dto.UserId.ToString());
                         return RedirectToPage("Admins/Index");
                     }
                     else if (dto.Role.Equals("STAFF"))
                     {
+                        HttpContext.Session.SetString("loginMemName", dto.FullName);
                         HttpContext.Session.SetString("loginMem", dto.Email);
                         HttpContext.Session.SetString("loginMemId", dto.UserId.ToString());
                         return RedirectToPage("Staffs/Index");
                     }
                     else
                     {
+                        HttpContext.Session.SetString("loginMemName", dto.FullName);
                         HttpContext.Session.SetString("loginMem", dto.Email);
                         HttpContext.Session.SetString("loginMemId", dto.UserId.ToString());
                         return RedirectToPage("./Index");

@@ -1,0 +1,36 @@
+﻿@page
+@model BirdMeal.Pages.Admins.Accounts.ListAccountModel
+@{
+    Layout = "~/Pages/Shared/AdminLayout.cshtml";
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">FullName</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Address</th>
+            <th scope="col">Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.ListUsers != null && Model.ListUsers.Any())
+        {
+            @foreach (var item in Model.ListUsers)
+            {
+                <tr>
+                    <td>@item.UserId</td>
+                    <td>@item.FullName</td>
+                    <td>@item.Email</td>
+                    <td>@item.Phone</td>
+                    <td>@item.Address</td>
+                    <td>@item.Role</td>
+
+                </tr>
+            }
+        }
+
+
+    </tbody>
+</table>

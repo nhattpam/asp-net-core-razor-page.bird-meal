@@ -28,7 +28,6 @@ namespace BirdMeal.Pages.Staffs.Products
                 if (u != null && u.Role.Equals("STAFF"))
                 {
                     ListProducts = List();
-                    foreach(var item in ListProducts)
                     return Page();
                 }
             }
@@ -39,7 +38,7 @@ namespace BirdMeal.Pages.Staffs.Products
             return RedirectToPage("/Error");
         }
 
-        public IEnumerable<ProductViewModel> List()
+        private IEnumerable<ProductViewModel> List()
         {
             var products = productRepository.GetProductList();
 
