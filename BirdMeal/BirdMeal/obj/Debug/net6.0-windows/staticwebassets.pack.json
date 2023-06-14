@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\images\\66263f2d-8a4c-4ae7-b267-e3e7812d87e9.jpg",
+      "PackagePath": "staticwebassets\\images\\66263f2d-8a4c-4ae7-b267-e3e7812d87e9.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\images\\cc11ce2b-047c-4f10-b452-63caa6cb3922.jpg",
+      "PackagePath": "staticwebassets\\images\\cc11ce2b-047c-4f10-b452-63caa6cb3922.jpg"
+    },
+    {
       "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

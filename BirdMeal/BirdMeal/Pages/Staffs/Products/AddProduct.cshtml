@@ -4,7 +4,7 @@
     Layout = "~/Pages/Shared/StaffLayout.cshtml";
 }
 
-<form method="post" class="my-4">
+<form method="post" class="my-4" enctype="multipart/form-data">
     <div asp-validation-summary="All" class="text-danger"></div>
 
     <div class="form-group">
@@ -33,7 +33,7 @@
 
     <div class="form-group">
         <label for="status">Status:</label>
-        <select class="form-control"  asp-for="AddProduct.Status" required>
+        <select class="form-control" asp-for="AddProduct.Status" required>
             <option value="true">Active</option>
             <option value="false">Inactive</option>
         </select>
@@ -48,9 +48,18 @@
 
     <div class="form-group">
         <label for="image">Image:</label>
-        <input type="file" class="form-control-file" asp-for="AddProduct.Image">
+        <input type="file" class="form-control-file" asp-for="Image">
         <span asp-validation-for="Image" class="text-danger"></span>
     </div>
+
+    <!-- Display the uploaded image -->
+    @if (Model.AddProduct != null && !string.IsNullOrEmpty(Model.AddProduct.Image))
+
+    {
+        <div>
+            <img src="~/images/@Model.AddProduct.Image" alt="Product Image" width="200" />
+        </div>
+    }
 
     <button type="submit" class="btn btn-primary">Add Product</button>
 </form>

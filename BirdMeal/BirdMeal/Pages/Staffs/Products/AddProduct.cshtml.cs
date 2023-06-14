@@ -7,8 +7,6 @@ using Repository.ProductRepository;
 using Repository.UserRepository;
 using System;
 using System.IO;
-using System.Threading.Tasks;
-using System.Windows;
 using ViewModel;
 
 namespace BirdMeal.Pages.Staffs.Products
@@ -49,6 +47,27 @@ namespace BirdMeal.Pages.Staffs.Products
 
         public IActionResult OnPost()
         {
+            if (Image != null && Image.Length > 0)
+            {
+                // Generate a unique file name for the image
+                string fileName = Guid.NewGuid().ToString() + Path.GetExtension(Image.FileName);
+
+                // Set the path where you want to save the image
+                string imagePath = Path.Combine(_hostingEnvironment.WebRootPath, "images");
+                string fullPath = Path.Combine(imagePath, fileName);
+
+                // Create the directory if it doesn't exist
+                Directory.CreateDirectory(imagePath);
+
+                // Save the image file to the specified path
+                using (var fileStream = new FileStream(fullPath, FileMode.Create))
+                {
+                    Image.CopyTo(fileStream);
+                }
+
+                // Set the image file name in the product object
+                AddProduct.Image = fileName;
+            }
 
             var product = new Product()
             {
@@ -70,8 +89,6 @@ namespace BirdMeal.Pages.Staffs.Products
             {
                 return RedirectToPage("/Staffs/Products/Index");
             }
-
-            
         }
     }
 }
