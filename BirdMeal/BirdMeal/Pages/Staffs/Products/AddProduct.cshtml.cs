@@ -47,26 +47,8 @@ namespace BirdMeal.Pages.Staffs.Products
             return RedirectToPage("/Error");
         }
 
-        public IActionResult OnPostAsync()
+        public IActionResult OnPost()
         {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
-
-            if (Image != null && Image.Length > 0)
-            {
-                string uploadsFolder = Path.Combine(_hostingEnvironment.WebRootPath, "images");
-                string uniqueFileName = Guid.NewGuid().ToString() + "_" + Image.FileName;
-                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
-
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
-                {
-                    Image.CopyTo(fileStream);
-                }
-
-                AddProduct.Image = uniqueFileName;
-            }
 
             var product = new Product()
             {
@@ -75,20 +57,21 @@ namespace BirdMeal.Pages.Staffs.Products
                 Description = AddProduct.Description,
                 Image = AddProduct.Image,
                 Status = AddProduct.Status,
-                Weight = AddProduct.Weight
+                Weight = AddProduct.Weight,
+                Quantity = AddProduct.Quantity
             };
 
             bool check = _productRepository.AddProduct(product);
             if (check)
             {
-                MessageBox.Show("THANH CONG");
+                return RedirectToPage("/Staffs/Products/ListProduct");
             }
             else
             {
-                MessageBox.Show("FAILED");
+                return RedirectToPage("/Staffs/Products/Index");
             }
 
-            return RedirectToPage("/Staffs/Products/Index");
+            
         }
     }
 }

@@ -8201,6 +8201,266 @@
       "PackagePath": "staticwebassets\\my-css\\images\\tag.png"
     },
     {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\banner\\banner-1.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\banner\\banner-1.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\banner\\banner-2.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\banner\\banner-2.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\blog\\blog-1.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\blog\\blog-1.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\blog\\blog-2.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\blog\\blog-2.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\blog\\blog-3.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\blog\\blog-3.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\blog\\blog-4.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\blog\\blog-4.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\blog\\blog-5.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\blog\\blog-5.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\blog\\blog-6.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\blog\\blog-6.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\blog\\details\\details-author.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\blog\\details\\details-author.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\blog\\details\\details-hero.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\blog\\details\\details-hero.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\blog\\details\\details-pic.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\blog\\details\\details-pic.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\blog\\sidebar\\sr-1.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\blog\\sidebar\\sr-1.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\blog\\sidebar\\sr-2.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\blog\\sidebar\\sr-2.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\blog\\sidebar\\sr-3.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\blog\\sidebar\\sr-3.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\breadcrumb.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\breadcrumb.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\cart\\cart-1.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\cart\\cart-1.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\cart\\cart-2.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\cart\\cart-2.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\cart\\cart-3.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\cart\\cart-3.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\categories\\cat-1.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\categories\\cat-1.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\categories\\cat-2.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\categories\\cat-2.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\categories\\cat-3.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\categories\\cat-3.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\categories\\cat-4.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\categories\\cat-4.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\categories\\cat-5.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\categories\\cat-5.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\featured\\feature-1.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\featured\\feature-1.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\featured\\feature-2.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\featured\\feature-2.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\featured\\feature-3.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\featured\\feature-3.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\featured\\feature-4.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\featured\\feature-4.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\featured\\feature-5.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\featured\\feature-5.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\featured\\feature-6.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\featured\\feature-6.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\featured\\feature-7.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\featured\\feature-7.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\featured\\feature-8.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\featured\\feature-8.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\hero\\banner.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\hero\\banner.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\language.png",
+      "PackagePath": "staticwebassets\\my-css\\img\\language.png"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\latest-product\\lp-1.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\latest-product\\lp-1.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\latest-product\\lp-2.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\latest-product\\lp-2.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\latest-product\\lp-3.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\latest-product\\lp-3.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\logo.png",
+      "PackagePath": "staticwebassets\\my-css\\img\\logo.png"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\payment-item.png",
+      "PackagePath": "staticwebassets\\my-css\\img\\payment-item.png"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\product\\details\\product-details-1.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\product\\details\\product-details-1.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\product\\details\\product-details-2.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\product\\details\\product-details-2.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\product\\details\\product-details-3.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\product\\details\\product-details-3.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\product\\details\\product-details-4.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\product\\details\\product-details-4.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\product\\details\\product-details-5.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\product\\details\\product-details-5.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\product\\details\\thumb-1.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\product\\details\\thumb-1.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\product\\details\\thumb-2.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\product\\details\\thumb-2.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\product\\details\\thumb-3.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\product\\details\\thumb-3.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\product\\details\\thumb-4.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\product\\details\\thumb-4.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\product\\discount\\pd-1.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\product\\discount\\pd-1.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\product\\discount\\pd-2.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\product\\discount\\pd-2.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\product\\discount\\pd-3.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\product\\discount\\pd-3.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\product\\discount\\pd-4.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\product\\discount\\pd-4.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\product\\discount\\pd-5.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\product\\discount\\pd-5.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\product\\discount\\pd-6.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\product\\discount\\pd-6.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\product\\product-1.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\product\\product-1.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\product\\product-10.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\product\\product-10.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\product\\product-11.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\product\\product-11.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\product\\product-12.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\product\\product-12.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\product\\product-2.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\product\\product-2.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\product\\product-3.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\product\\product-3.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\product\\product-4.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\product\\product-4.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\product\\product-5.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\product\\product-5.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\product\\product-6.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\product\\product-6.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\product\\product-7.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\product\\product-7.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\product\\product-8.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\product\\product-8.jpg"
+    },
+    {
+      "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\img\\product\\product-9.jpg",
+      "PackagePath": "staticwebassets\\my-css\\img\\product\\product-9.jpg"
+    },
+    {
       "Id": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\my-css\\js\\bootstrap.min.js"
     },

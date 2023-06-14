@@ -5,84 +5,85 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BirdMeal
 build_property.RootNamespace = BirdMeal
-build_property.ProjectDir = F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\BirdMeal\
+build_property.ProjectDir = D:\PRN221\Projects\asp-net-core-razor-page.bird-meal\BirdMeal\BirdMeal\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\BirdMeal
+build_property.MSBuildProjectDirectory = D:\PRN221\Projects\asp-net-core-razor-page.bird-meal\BirdMeal\BirdMeal
 build_property._RazorSourceGeneratorDebug = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Admins/Accounts/AddAccount.cshtml]
+[D:/PRN221/Projects/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Admins/Accounts/AddAccount.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5zXEFjY291bnRzXEFkZEFjY291bnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Admins/Accounts/ListAccount.cshtml]
+[D:/PRN221/Projects/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Admins/Accounts/ListAccount.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5zXEFjY291bnRzXExpc3RBY2NvdW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Admins/Index.cshtml]
+[D:/PRN221/Projects/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Admins/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Error.cshtml]
+[D:/PRN221/Projects/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Index.cshtml]
+[D:/PRN221/Projects/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Login.cshtml]
+[D:/PRN221/Projects/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Logout.cshtml]
+[D:/PRN221/Projects/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Privacy.cshtml]
+[D:/PRN221/Projects/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Register.cshtml]
+[D:/PRN221/Projects/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Shared/AdminLayout.cshtml]
+[D:/PRN221/Projects/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Shared/AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXEFkbWluTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Shared/StaffLayout.cshtml]
+[D:/PRN221/Projects/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Shared/StaffLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXFN0YWZmTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[D:/PRN221/Projects/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Staffs/Index.cshtml]
+[D:/PRN221/Projects/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Staffs/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhZmZzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Staffs/Products/AddProduct.cshtml]
+[D:/PRN221/Projects/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Staffs/Products/AddProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhZmZzXFByb2R1Y3RzXEFkZFByb2R1Y3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Staffs/Products/ListProduct.cshtml]
+[D:/PRN221/Projects/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Staffs/Products/ListProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhZmZzXFByb2R1Y3RzXExpc3RQcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/_ViewImports.cshtml]
+[D:/PRN221/Projects/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/_ViewStart.cshtml]
+[D:/PRN221/Projects/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Shared/_Layout.cshtml]
+[D:/PRN221/Projects/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-halycfifab

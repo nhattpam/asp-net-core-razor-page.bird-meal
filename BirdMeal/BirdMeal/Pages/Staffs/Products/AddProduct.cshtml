@@ -33,9 +33,9 @@
 
     <div class="form-group">
         <label for="status">Status:</label>
-        <select class="form-control" id="status" name="Status" asp-for="AddProduct.Status" required>
-            <option value="1">Active</option>
-            <option value="0">Inactive</option>
+        <select class="form-control"  asp-for="AddProduct.Status" required>
+            <option value="true">Active</option>
+            <option value="false">Inactive</option>
         </select>
         <span asp-validation-for="AddProduct.Status" class="text-danger"></span>
     </div>
@@ -48,7 +48,7 @@
 
     <div class="form-group">
         <label for="image">Image:</label>
-        <input type="file" class="form-control-file" asp-for="Image">
+        <input type="file" class="form-control-file" asp-for="AddProduct.Image">
         <span asp-validation-for="Image" class="text-danger"></span>
     </div>
 
