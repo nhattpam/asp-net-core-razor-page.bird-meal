@@ -4,3 +4,9 @@
     Layout = "~/Pages/Shared/StaffLayout.cshtml";
 }
 
+<h1>Wanna delete @Model.ProductDelete.ProductName?</h1>
+<form method="post">
+    <input type="text" asp-for="@Model.ProductDelete.ProductId" hidden />
+    <button type="submit" class="btn btn-danger">Yes</button>
+    <a class="btn btn-dark" asp-page="~/Staffs/Products/Listproduct">No</a>
+</form>

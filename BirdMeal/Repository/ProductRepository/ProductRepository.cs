@@ -15,6 +15,11 @@ namespace Repository.ProductRepository
 			return ProductDAO.Instance.AddProduct(product);
 		}
 
+        public bool DeleteProductById(int productId)
+        {
+            return ProductDAO.Instance.DeleteProductById(productId);   
+        }
+
         public Product GetProductById(int productId)
         {
             return ProductDAO.Instance.GetProductById(productId);

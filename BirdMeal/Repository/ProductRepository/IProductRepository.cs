@@ -14,6 +14,7 @@ namespace Repository.ProductRepository
 		public bool AddProduct(Product product);
         public bool UpdateProduct(Product product);
 		public Product GetProductById(int productId);
+		public bool DeleteProductById(int productId);
 
     }
 }

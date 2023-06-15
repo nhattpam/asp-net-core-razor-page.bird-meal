@@ -107,6 +107,27 @@ namespace DataAccess
 
             return p;
         }
+
+        public bool DeleteProductById(int productId)
+        {
+            Product p = null;
+
+            try
+            {
+                var context = new BirdMealContext();
+                p = GetProductById(productId);
+                p.Status = false;
+                context.Update(p);
+                context.SaveChanges();
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                return false;
+                throw new Exception(ex.Message);
+            }
+        }
     }
 
 
