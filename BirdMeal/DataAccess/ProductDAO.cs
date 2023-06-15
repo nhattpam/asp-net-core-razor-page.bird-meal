@@ -70,6 +70,43 @@ namespace DataAccess
             }
         }
 
+
+        public bool UpdateProduct(Product product)
+        {
+            try
+            {
+                using (var context = new BirdMealContext())
+                {
+                    context.Products.Update(product);
+                    context.SaveChanges();
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred while adding the product: {ex.Message}");
+                return false;
+            }
+        }
+
+        public Product GetProductById(int productId)
+        {
+            Product p = null;
+
+            try
+            {
+
+                var context = new BirdMealContext();
+                p = context.Products.SingleOrDefault(f => f.ProductId == productId); ;
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return p;
+        }
     }
 
 

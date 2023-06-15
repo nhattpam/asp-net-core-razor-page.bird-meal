@@ -12,5 +12,8 @@ namespace Repository.ProductRepository
 		public IEnumerable<Product> GetProductList();
 
 		public bool AddProduct(Product product);
-	}
+        public bool UpdateProduct(Product product);
+		public Product GetProductById(int productId);
+
+    }
 }

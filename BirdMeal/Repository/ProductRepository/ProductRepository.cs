@@ -15,9 +15,19 @@ namespace Repository.ProductRepository
 			return ProductDAO.Instance.AddProduct(product);
 		}
 
-		public IEnumerable<Product> GetProductList()
+        public Product GetProductById(int productId)
+        {
+            return ProductDAO.Instance.GetProductById(productId);
+        }
+
+        public IEnumerable<Product> GetProductList()
 		{
 			return ProductDAO.Instance.GetProductList();
 		}
-	}
+
+        public bool UpdateProduct(Product product)
+        {
+            return ProductDAO.Instance.UpdateProduct(product);
+        }
+    }
 }
