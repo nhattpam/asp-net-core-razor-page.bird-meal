@@ -2382,24 +2382,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MinhThanh\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BusinessObjects\\BusinessObjects.csproj",
+      "projectUniqueName": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BusinessObjects\\BusinessObjects.csproj",
       "projectName": "BusinessObjects",
-      "projectPath": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BusinessObjects\\BusinessObjects.csproj",
-      "packagesPath": "C:\\Users\\MinhThanh\\.nuget\\packages\\",
-      "outputPath": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BusinessObjects\\obj\\",
+      "projectPath": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BusinessObjects\\BusinessObjects.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BusinessObjects\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\MinhThanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2469,7 +2464,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.408\\RuntimeIdentifierGraph.json"
       }
     }
   }

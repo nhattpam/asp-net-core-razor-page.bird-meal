@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\BirdMeal.csproj": {}
+    "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\BirdMeal.csproj": {}
   },
   "projects": {
-    "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\BirdMeal.csproj": {
+    "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\BirdMeal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\BirdMeal.csproj",
+        "projectUniqueName": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\BirdMeal.csproj",
         "projectName": "BirdMeal",
-        "projectPath": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\BirdMeal.csproj",
-        "packagesPath": "C:\\Users\\MinhThanh\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\obj\\",
+        "projectPath": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\BirdMeal.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\MinhThanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,11 +28,11 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\Repository\\Repository.csproj": {
-                "projectPath": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\Repository\\Repository.csproj"
+              "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\Repository\\Repository.csproj": {
+                "projectPath": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\Repository\\Repository.csproj"
               },
-              "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\ViewModel\\ViewModel.csproj": {
-                "projectPath": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\ViewModel\\ViewModel.csproj"
+              "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\ViewModel\\ViewModel.csproj": {
+                "projectPath": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\ViewModel\\ViewModel.csproj"
               }
             }
           }
@@ -72,25 +68,21 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BusinessObjects\\BusinessObjects.csproj": {
+    "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BusinessObjects\\BusinessObjects.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BusinessObjects\\BusinessObjects.csproj",
+        "projectUniqueName": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BusinessObjects\\BusinessObjects.csproj",
         "projectName": "BusinessObjects",
-        "projectPath": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BusinessObjects\\BusinessObjects.csproj",
-        "packagesPath": "C:\\Users\\MinhThanh\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BusinessObjects\\obj\\",
+        "projectPath": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BusinessObjects\\BusinessObjects.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BusinessObjects\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\MinhThanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -160,25 +152,21 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\DataAccess\\DataAccess.csproj": {
+    "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\MinhThanh\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\DataAccess\\obj\\",
+        "projectPath": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\MinhThanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -192,8 +180,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BusinessObjects\\BusinessObjects.csproj": {
-                "projectPath": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BusinessObjects\\BusinessObjects.csproj"
+              "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BusinessObjects\\BusinessObjects.csproj": {
+                "projectPath": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BusinessObjects\\BusinessObjects.csproj"
               }
             }
           }
@@ -226,25 +214,21 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\Repository\\Repository.csproj": {
+    "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\Repository\\Repository.csproj",
+        "projectUniqueName": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\Repository\\Repository.csproj",
-        "packagesPath": "C:\\Users\\MinhThanh\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\Repository\\obj\\",
+        "projectPath": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\Repository\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\MinhThanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -258,11 +242,11 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BusinessObjects\\BusinessObjects.csproj": {
-                "projectPath": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BusinessObjects\\BusinessObjects.csproj"
+              "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BusinessObjects\\BusinessObjects.csproj": {
+                "projectPath": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BusinessObjects\\BusinessObjects.csproj"
               },
-              "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\DataAccess\\DataAccess.csproj"
+              "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -295,25 +279,21 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\ViewModel\\ViewModel.csproj": {
+    "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\ViewModel\\ViewModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\ViewModel\\ViewModel.csproj",
+        "projectUniqueName": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\ViewModel\\ViewModel.csproj",
         "projectName": "ViewModel",
-        "projectPath": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\ViewModel\\ViewModel.csproj",
-        "packagesPath": "C:\\Users\\MinhThanh\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\ViewModel\\obj\\",
+        "projectPath": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\ViewModel\\ViewModel.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\ViewModel\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\MinhThanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -327,8 +307,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BusinessObjects\\BusinessObjects.csproj": {
-                "projectPath": "D:\\PRN221\\Projects\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BusinessObjects\\BusinessObjects.csproj"
+              "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BusinessObjects\\BusinessObjects.csproj": {
+                "projectPath": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BusinessObjects\\BusinessObjects.csproj"
               }
             }
           }
@@ -361,7 +341,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     }
