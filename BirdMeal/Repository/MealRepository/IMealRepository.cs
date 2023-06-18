@@ -10,5 +10,6 @@ namespace Repository.MealRepository
     public interface IMealRepository
     {
         public IEnumerable<Meal> GetMealList();
+        public IEnumerable<Meal> GetMealListHot();
     }
 }

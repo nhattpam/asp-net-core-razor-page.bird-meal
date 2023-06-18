@@ -48,6 +48,26 @@ namespace DataAccess
 			return products;
 		}
 
+        public IEnumerable<Product> GetProductListHot()
+        {
+            IEnumerable<Product> products = null;
+
+            try
+            {
+                var context = new BirdMealContext();
+                // Get From Database
+
+                products = context.Products.Take(5);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return products;
+        }
+
         public bool AddProduct(Product product)
         {
             if (product == null)

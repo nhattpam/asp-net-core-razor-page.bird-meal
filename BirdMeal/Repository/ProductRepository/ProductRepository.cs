@@ -29,6 +29,10 @@ namespace Repository.ProductRepository
 		{
 			return ProductDAO.Instance.GetProductList();
 		}
+        public IEnumerable<Product> GetProductListHot()
+        {
+            return ProductDAO.Instance.GetProductListHot();
+        }
 
         public bool UpdateProduct(Product product)
         {

@@ -47,7 +47,27 @@ namespace DataAccess
             return meals;
         }
 
-      
+        public IEnumerable<Meal> GetMealListHot()
+        {
+            IEnumerable<Meal> meals = null;
+
+            try
+            {
+                var context = new BirdMealContext();
+                // Get From Database
+
+                meals = context.Meals.Take(5);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return meals;
+        }
+
+
 
     }
 }

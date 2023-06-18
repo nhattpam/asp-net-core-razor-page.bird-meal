@@ -98,8 +98,6 @@
 <div class="top-brands">
     <div class="container">
         <h3>Hot Offers</h3>
-
-        
         <div class="container-fluid">
             <div class="row justify-content-around mb-3">
                 @if (Model.ListProducts != null && Model.ListProducts.Any())
@@ -113,24 +111,38 @@
                                     <h4 class="card-title">@item.ProductName <span class="badge bg-success">New</span></h4>
                                     <h5 class="card-title">$@item.Price</h5>
                                     <p class="card-text">@item.Description</p>
-                                    <a href="https://www.intel.com.au/content/www/au/en/products/sku/203474/intel-core-i310105f-processor-6m-cache-up-to-4-40-ghz/specifications.html?wapkw=i3-10105F" target="_blank" class="btn btn-primary">More Information</a>
-                                    <a href="https://www.computeralliance.com.au/intel-s1200-core-i3-10105f-3.7ghz-quad-core-cpu-bx8070110105f" target="_blank" class="btn btn-primary">Buy</a>
+                                    <a href="~/Globals/Products/DetailGlobal/@item.ProductId" target="_blank" class="btn btn-primary">More Information</a>
                                 </div>
-
                             </div>
-
-
-
                         </div>
                     }
-
                 }
-                
-                
             </div>
         </div>
 
-
+        <h3>Hot Combos</h3>
+        <div class="container-fluid">
+            <div class="row justify-content-around mb-3">
+                @if (Model.ListMeals != null && Model.ListMeals.Any())
+                {
+                    @foreach (var item in Model.ListMeals)
+                    {
+                        <div class="col-lg-4">
+                            <div class="card" style="width:225px">
+                                <div class="card-body">
+                                    <h4 class="card-title">@item.MealId <span class="badge bg-success">New</span></h4>
+                                    <h5 class="card-title">$@item.Description</h5>
+                                    <p class="card-text">@item.RoutingTime</p>
+                                    <p class="card-text">@item.TotalCost</p>
+                                    <a href="~/Globals/Meals/DetailGlobal" target="_blank" class="btn btn-primary">More Information</a>
+                                    <a href="https://www.computeralliance.com.au/intel-s1200-core-i3-10105f-3.7ghz-quad-core-cpu-bx8070110105f" target="_blank" class="btn btn-primary">Buy</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
     </div>
 
 </div>

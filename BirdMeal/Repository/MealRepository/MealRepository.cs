@@ -14,5 +14,10 @@ namespace Repository.MealRepository
         {
             return MealDAO.Instance.GetMealList();
         }
+
+        public IEnumerable<Meal> GetMealListHot()
+        {
+            return MealDAO.Instance.GetMealListHot();
+        }
     }
 }

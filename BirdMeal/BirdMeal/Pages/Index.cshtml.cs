@@ -1,6 +1,7 @@
 ﻿using BusinessObjects.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Repository.MealRepository;
 using Repository.ProductRepository;
 using Repository.UserRepository;
 using System.Windows;
@@ -13,6 +14,8 @@ namespace BirdMeal.Pages
         private IUserRepository userRepository { get; set; }
         private readonly ILogger<IndexModel> _logger;
         public IProductRepository productRepository { get; set; }
+        public IMealRepository mealRepository { get; set; }
+        public IEnumerable<MealViewModel> ListMeals { get; set; }
         public IEnumerable<ProductViewModel> ListProducts { get; set; }
 
         public IndexModel(ILogger<IndexModel> logger)
@@ -20,6 +23,7 @@ namespace BirdMeal.Pages
             _logger = logger;
             userRepository = new UserRepository();
             productRepository = new ProductRepository();
+            mealRepository = new MealRepository();
         }
 
         public IActionResult OnGet()
@@ -28,7 +32,8 @@ namespace BirdMeal.Pages
 
             if (loginMem == null)
             {
-                ListProducts = List();
+                ListProducts = ListHotProduct();
+                ListMeals = ListHotMeal();
                 return Page();
             }
             else
@@ -39,13 +44,13 @@ namespace BirdMeal.Pages
                     return RedirectToPage("/Error");
                 }
             }
-            ListProducts = List();
+            ListProducts = ListHotProduct();
             return Page();
         }
 
-		public IEnumerable<ProductViewModel> List()
+		public IEnumerable<ProductViewModel> ListHotProduct()
 		{
-			var products = productRepository.GetProductList();
+			var products = productRepository.GetProductListHot();
 
 			var dtos = products.Select(pro => new ProductViewModel()
 			{
@@ -60,5 +65,20 @@ namespace BirdMeal.Pages
 
 			return dtos;
 		}
-	}
+
+        public IEnumerable<MealViewModel> ListHotMeal()
+        {
+            var meals = mealRepository.GetMealListHot();
+
+            var dtos = meals.Select(pro => new MealViewModel()
+            {
+                MealId = pro.MealId,
+                Description = pro.Description,
+                RoutingTime = pro.RoutingTime,
+                TotalCost = pro.TotalCost
+            });
+
+            return dtos;
+        }
+    }
 }
