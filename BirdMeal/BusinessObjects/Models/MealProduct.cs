@@ -11,7 +11,7 @@ namespace BusinessObjects.Models
         }
 
         public int MealProductId { get; set; }
-        public int? MealId { get; set; }
+        public string? MealId { get; set; }
         public int? ProductId { get; set; }
         public int? Quantity { get; set; }
 

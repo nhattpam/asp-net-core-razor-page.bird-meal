@@ -29,16 +29,16 @@ namespace BusinessObjects.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-			if (!optionsBuilder.IsConfigured)
-			{
-				var builder = new ConfigurationBuilder()
-								.SetBasePath(Directory.GetCurrentDirectory())
-								.AddJsonFile("appsettings.json", true, true);
-				IConfigurationRoot configuration = builder.Build();
-				string _connectionString = configuration.GetConnectionString("MyCnn");
-				optionsBuilder.UseSqlServer(_connectionString);
-			}
-		}
+            if (!optionsBuilder.IsConfigured)
+            {
+                var builder = new ConfigurationBuilder()
+                                .SetBasePath(Directory.GetCurrentDirectory())
+                                .AddJsonFile("appsettings.json", true, true);
+                IConfigurationRoot configuration = builder.Build();
+                string _connectionString = configuration.GetConnectionString("MyCnn");
+                optionsBuilder.UseSqlServer(_connectionString);
+            }
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -53,17 +53,20 @@ namespace BusinessObjects.Models
                 entity.HasOne(d => d.MealProduct)
                     .WithMany(p => p.Bills)
                     .HasForeignKey(d => d.MealProductId)
-                    .HasConstraintName("FK__Bills__meal_prod__45F365D3");
+                    .HasConstraintName("FK__Bills__meal_prod__1ED998B2");
 
                 entity.HasOne(d => d.OrderDetail)
                     .WithMany(p => p.Bills)
                     .HasForeignKey(d => d.OrderDetailId)
-                    .HasConstraintName("FK__Bills__orderDeta__46E78A0C");
+                    .HasConstraintName("FK__Bills__orderDeta__1FCDBCEB");
             });
 
             modelBuilder.Entity<Meal>(entity =>
             {
-                entity.Property(e => e.MealId).HasColumnName("mealID");
+                entity.Property(e => e.MealId)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("mealID");
 
                 entity.Property(e => e.Description)
                     .HasMaxLength(4000)
@@ -82,7 +85,10 @@ namespace BusinessObjects.Models
 
                 entity.Property(e => e.MealProductId).HasColumnName("meal_product_ID");
 
-                entity.Property(e => e.MealId).HasColumnName("mealID");
+                entity.Property(e => e.MealId)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("mealID");
 
                 entity.Property(e => e.ProductId).HasColumnName("productID");
 
@@ -91,12 +97,12 @@ namespace BusinessObjects.Models
                 entity.HasOne(d => d.Meal)
                     .WithMany(p => p.MealProducts)
                     .HasForeignKey(d => d.MealId)
-                    .HasConstraintName("FK__Meal_Prod__mealI__47DBAE45");
+                    .HasConstraintName("FK__Meal_Prod__mealI__20C1E124");
 
                 entity.HasOne(d => d.Product)
                     .WithMany(p => p.MealProducts)
                     .HasForeignKey(d => d.ProductId)
-                    .HasConstraintName("FK__Meal_Prod__produ__48CFD27E");
+                    .HasConstraintName("FK__Meal_Prod__produ__21B6055D");
             });
 
             modelBuilder.Entity<Order>(entity =>
@@ -118,7 +124,7 @@ namespace BusinessObjects.Models
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.Orders)
                     .HasForeignKey(d => d.UserId)
-                    .HasConstraintName("FK__Orders__userID__4AB81AF0");
+                    .HasConstraintName("FK__Orders__userID__239E4DCF");
             });
 
             modelBuilder.Entity<OrderDetail>(entity =>
@@ -136,7 +142,7 @@ namespace BusinessObjects.Models
                 entity.HasOne(d => d.Order)
                     .WithMany(p => p.OrderDetails)
                     .HasForeignKey(d => d.OrderId)
-                    .HasConstraintName("FK__Order_Det__order__49C3F6B7");
+                    .HasConstraintName("FK__Order_Det__order__22AA2996");
             });
 
             modelBuilder.Entity<Product>(entity =>
@@ -166,7 +172,7 @@ namespace BusinessObjects.Models
 
             modelBuilder.Entity<User>(entity =>
             {
-                entity.HasIndex(e => e.WalletId, "UQ__Users__3785C87188AD8BF7")
+                entity.HasIndex(e => e.WalletId, "UQ__Users__3785C871EE5A8E15")
                     .IsUnique();
 
                 entity.Property(e => e.UserId).HasColumnName("userID");
@@ -200,7 +206,7 @@ namespace BusinessObjects.Models
                 entity.HasOne(d => d.Wallet)
                     .WithOne(p => p.User)
                     .HasForeignKey<User>(d => d.WalletId)
-                    .HasConstraintName("FK__Users__walletId__4BAC3F29");
+                    .HasConstraintName("FK__Users__walletId__24927208");
             });
 
             modelBuilder.Entity<Wallet>(entity =>

@@ -14,7 +14,7 @@ namespace ViewModel
             MealProducts = new HashSet<MealProductViewModel>();
         }
 
-        public int MealId { get; set; }
+        public string MealId { get; set; } = null!;
         public string? Description { get; set; }
         public string? RoutingTime { get; set; }
         public double? TotalCost { get; set; }

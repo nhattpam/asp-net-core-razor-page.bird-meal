@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wd5VMcw6JYLHH1LzbEYPkPIF9TG9tay+yZKyALCeBbo=",
+  "Hash": "rWrt2tA+W3VDGnZcPC1+HvzKBrdDwjtyCZTt7BmVmJo=",
   "Source": "BirdMeal",
   "BasePath": "_content/BirdMeal",
   "Mode": "Default",
@@ -338,6 +338,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\66e9f890-fdca-4336-8a38-98b1fd4fc377.gif"
+    },
+    {
+      "Identity": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\images\\6aab03ae-d406-4ac6-b673-4a217f6eb6ed.jpg",
+      "SourceId": "BirdMeal",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\",
+      "BasePath": "_content/BirdMeal",
+      "RelativePath": "images/6aab03ae-d406-4ac6-b673-4a217f6eb6ed.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\6aab03ae-d406-4ac6-b673-4a217f6eb6ed.jpg"
     },
     {
       "Identity": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\images\\6ba59623-a4c6-4036-ad2d-1beaa7944aea.jpg",

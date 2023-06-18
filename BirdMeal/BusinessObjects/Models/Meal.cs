@@ -10,7 +10,7 @@ namespace BusinessObjects.Models
             MealProducts = new HashSet<MealProduct>();
         }
 
-        public int MealId { get; set; }
+        public string MealId { get; set; } = null!;
         public string? Description { get; set; }
         public string? RoutingTime { get; set; }
         public double? TotalCost { get; set; }

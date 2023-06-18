@@ -1,0 +1,40 @@
+﻿@page
+@model BirdMeal.Pages.Staffs.Meals.ListMealModel
+@{
+    Layout = "~/Pages/Shared/StaffLayout.cshtml";
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Meal Id</th>
+            <th scope="col">Description</th>
+            <th scope="col">Routing Time</th>
+            <th scope="col">Cost</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.ListMeals != null && Model.ListMeals.Any())
+        {
+            @foreach (var item in Model.ListMeals)
+            {
+                <tr>
+                   
+                    <td>@item.MealId</td>
+                    <td>@item.Description</td>
+                    <td>@item.RoutingTime</td>
+                    <td>@item.TotalCost</td>
+
+                    <td>
+                        <a class="btn btn-primary" href="~/Staffs/Meals/DetailMeal/@item.MealId">Detail</a>
+                        <a class="btn btn-warning" href="~/Staffs/Meals/EditMeal/@item.MealId">Edit</a>
+                        <a class="btn btn-danger" href="~/Staffs/Meals/DeleteMeal/@item.MealId">Delete</a>
+                    </td>
+                </tr>
+
+            }
+        }
+
+
+    </tbody>
+</table>

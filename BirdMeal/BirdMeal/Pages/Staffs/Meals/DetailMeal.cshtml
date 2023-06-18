@@ -1,0 +1,27 @@
+﻿@page "{id}"
+@model BirdMeal.Pages.Staffs.Meals.DetailMealModel
+@{
+    Layout = "~/Pages/Shared/StaffLayout.cshtml";
+}
+
+<h1 class="mb-3">Detail Meal</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Meal Id</th>
+            <th>Product</th>
+            <th>Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ListMealProductsDetail)
+        {
+            <tr>
+                <td>@item.MealId</td>
+                <td>@item.Product.ProductName</td>
+                <td>@item.Quantity</td>
+               
+            </tr>
+        }
+    </tbody>
+</table>
