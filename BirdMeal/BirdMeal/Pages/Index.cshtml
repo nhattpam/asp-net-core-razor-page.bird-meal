@@ -97,7 +97,7 @@
 </div>
 <div class="top-brands">
     <div class="container">
-        <h3>Hot Offers</h3>
+        <h3>Hot Products</h3>
         <div class="container-fluid">
             <div class="row justify-content-around mb-3">
                 @if (Model.ListProducts != null && Model.ListProducts.Any())
@@ -106,7 +106,7 @@
                     {
                         <div class="col-lg-4">
                             <div class="card" style="width:225px">
-                                <img class="card-img-top" src="@item.Image" alt="Card image">
+                                <img class="card-img-top" src="~/images/@item.Image" alt="Card image">
                                 <div class="card-body">
                                     <h4 class="card-title">@item.ProductName <span class="badge bg-success">New</span></h4>
                                     <h5 class="card-title">$@item.Price</h5>
@@ -134,7 +134,7 @@
                                     <h5 class="card-title">$@item.Description</h5>
                                     <p class="card-text">@item.RoutingTime</p>
                                     <p class="card-text">@item.TotalCost</p>
-                                    <a href="~/Globals/Meals/DetailGlobal" target="_blank" class="btn btn-primary">More Information</a>
+                                    <a href="~/Globals/Meals/DetailGlobal/@item.MealId" target="_blank" class="btn btn-primary">More Information</a>
                                     <a href="https://www.computeralliance.com.au/intel-s1200-core-i3-10105f-3.7ghz-quad-core-cpu-bx8070110105f" target="_blank" class="btn btn-primary">Buy</a>
                                 </div>
                             </div>
