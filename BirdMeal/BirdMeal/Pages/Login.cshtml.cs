@@ -58,7 +58,7 @@ namespace BirdMeal.Pages
                         HttpContext.Session.SetString("loginMemName", dto.FullName);
                         HttpContext.Session.SetString("loginMem", dto.Email);
                         HttpContext.Session.SetString("loginMemId", dto.UserId.ToString());
-                        return RedirectToPage("./Index");
+                        return RedirectToPage("/Index");
                     }
                 }
                 else

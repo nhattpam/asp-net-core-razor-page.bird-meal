@@ -61,11 +61,7 @@ namespace BirdMeal.Pages.Staffs.Products
 
         public IActionResult OnPost()
         {
-            if (!ModelState.IsValid)
-            {
-                // If the model state is not valid, return the current page with the validation errors
-                return Page();
-            }
+            
             Product existingProduct = _productRepository.GetProductById(EditProduct.ProductId);
 
             if (existingProduct == null)
@@ -93,6 +89,7 @@ namespace BirdMeal.Pages.Staffs.Products
                 // Set the image file name in the product object
                 EditProduct.Image = fileName;
             }
+
 
             existingProduct.ProductName = EditProduct.ProductName;
             existingProduct.Price = EditProduct.Price;

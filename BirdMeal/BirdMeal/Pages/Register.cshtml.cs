@@ -37,7 +37,7 @@ namespace BirdMeal.Pages
                 Address = AddUser.Address,
                 Role = "CUSTOMER",
                 WalletId = walletRepository.AddWallet()
-        };
+            };
 
             if (!string.IsNullOrWhiteSpace(AddUser.FullName)
                     && !string.IsNullOrWhiteSpace(AddUser.Password)
@@ -61,7 +61,7 @@ namespace BirdMeal.Pages
             }
             else
             {
-                ViewData["MessageFailed"] = "Lam on nhap day du du lieu va khong chua khoang trang hoac xem lai birthday";
+                ViewData["MessageFailed"] = "Lam on nhap day du du lieu va khong chua khoang trang";
             }
             return Page();
         }
