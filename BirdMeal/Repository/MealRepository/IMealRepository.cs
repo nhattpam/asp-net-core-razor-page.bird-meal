@@ -11,5 +11,8 @@ namespace Repository.MealRepository
     {
         public IEnumerable<Meal> GetMealList();
         public IEnumerable<Meal> GetMealListHot();
+        public Meal GeMealById(string mealId);
+
+        public bool UpdateMeal(Meal meal);
     }
 }

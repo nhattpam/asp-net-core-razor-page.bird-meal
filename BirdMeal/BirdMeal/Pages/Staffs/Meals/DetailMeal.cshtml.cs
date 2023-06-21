@@ -13,6 +13,7 @@ namespace BirdMeal.Pages.Staffs.Meals
         public IUserRepository userRepository { get; set; }
         public IEnumerable<MealProductViewModel> ListMealProductsDetail { get; set; }
         public IMealProductRepository mealProductRepository { get; set; }
+        [BindProperty]
         public MealViewModel mealViewModel { get; set; }
 
         public DetailMealModel()
@@ -41,17 +42,43 @@ namespace BirdMeal.Pages.Staffs.Meals
             return RedirectToPage("/Error");
         }
 
+        public IActionResult OnPost(string mealId, int productId)
+        {
+            var mealProducts = mealProductRepository.GetMealProductByMealId(mealId);
+            var mealProductToDelete = mealProducts.FirstOrDefault(mp => mp.ProductId == productId);
+            if (mealProductToDelete != null)
+            {
+                bool success = mealProductRepository.DeleteMealProduct(mealProductToDelete);
+
+                if (success)
+                {
+                    TempData["DeleteSuccessMessage"] = "Meal product deleted successfully.";
+                }
+                else
+                {
+                    TempData["DeleteErrorMessage"] = "Failed to delete the meal product.";
+                }
+            }
+            return RedirectToPage(new { id = mealId });
+        }
         public IEnumerable<MealProductViewModel> List()
         {
             var orderDetailsByOrderId = mealProductRepository.GetMealProductByMealId(mealViewModel.MealId);
 
-            var dtos = orderDetailsByOrderId.Select(oo => new MealProductViewModel()
+
+            if (orderDetailsByOrderId != null)
             {
-               MealId = oo.MealId,
-               Product = MapProductToViewModel(oo.Product),
-               Quantity = oo.Quantity
-            });
-            return dtos;
+                var dtos = orderDetailsByOrderId.Select(oo => new MealProductViewModel()
+                {
+                    MealId = oo.MealId,
+                    Product = MapProductToViewModel(oo.Product),
+                    Quantity = oo.Quantity
+                });
+
+                return dtos;
+            }
+
+            return Enumerable.Empty<MealProductViewModel>();
         }
 
         private ProductViewModel MapProductToViewModel(Product product)

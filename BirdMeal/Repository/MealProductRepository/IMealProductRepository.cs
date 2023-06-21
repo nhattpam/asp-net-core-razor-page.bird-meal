@@ -10,5 +10,8 @@ namespace Repository.MealProductRepository
     public interface IMealProductRepository
     {
         public IEnumerable<MealProduct> GetMealProductByMealId(string mealId);
+
+        public bool DeleteMealProduct(MealProduct mealProduct);
+
     }
 }

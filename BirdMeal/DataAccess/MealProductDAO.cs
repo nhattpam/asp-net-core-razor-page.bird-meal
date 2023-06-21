@@ -48,5 +48,22 @@ namespace DataAccess
 
             return os;
         }
+
+        public bool DeleteMealProduct(MealProduct mealProduct)
+        {
+            try
+            {
+                var context = new BirdMealContext();
+                context.MealProducts.Remove(mealProduct);
+                context.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception or log the error
+                return false;
+            }
+        }
+
     }
 }

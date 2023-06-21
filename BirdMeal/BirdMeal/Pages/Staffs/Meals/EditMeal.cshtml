@@ -1,0 +1,32 @@
+﻿@page "{id}"
+@model BirdMeal.Pages.Staffs.Meals.EditMealModel
+@{
+    Layout = "~/Pages/Shared/StaffLayout.cshtml";
+}
+
+<form method="post" class="my-4">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    
+    <input type="hidden" asp-for="EditMeal.MealId" />
+    
+    <div class="form-group">
+        <label for="productName">Description</label>
+        <input type="text" class="form-control" asp-for="EditMeal.Description" required>
+        <span asp-validation-for="EditMeal.Description" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label for="price">Routing time</label>
+        <input type="text" class="form-control" asp-for="EditMeal.RoutingTime" required>
+        <span asp-validation-for="EditMeal.RoutingTime" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label for="quantity">Cost</label>
+        <input type="number" class="form-control" asp-for="EditMeal.TotalCost" required>
+        <span asp-validation-for="EditMeal.TotalCost" class="text-danger"></span>
+    </div>
+    
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>

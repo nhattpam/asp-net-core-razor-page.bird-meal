@@ -4,24 +4,34 @@
     Layout = "~/Pages/Shared/StaffLayout.cshtml";
 }
 
-<h1 class="mb-3">Detail Meal</h1>
+<h1 class="mb-3">Detail Combo @Model.mealViewModel.MealId</h1>
 <table class="table">
     <thead>
         <tr>
-            <th>Meal Id</th>
             <th>Product</th>
             <th>Quantity</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model.ListMealProductsDetail)
         {
             <tr>
-                <td>@item.MealId</td>
                 <td>@item.Product.ProductName</td>
                 <td>@item.Quantity</td>
-               
+                <td>
+                    <form method="post">
+                        <input type="hidden" name="productId" value="@item.Product.ProductId" />
+                        <input type="hidden" name="mealId" value="@Model.mealViewModel.MealId" />
+                        <button type="submit" class="btn btn-danger">
+                            <i class="fas fa-trash-alt"></i> Delete
+                        </button>
+                    </form>
+                </td>
             </tr>
         }
     </tbody>
+
+
 </table>
+<a class="btn btn-primary"><i class="fas fa-plus-circle"></i> Add Product</a>

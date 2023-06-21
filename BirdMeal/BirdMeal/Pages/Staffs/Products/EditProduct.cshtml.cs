@@ -61,6 +61,11 @@ namespace BirdMeal.Pages.Staffs.Products
 
         public IActionResult OnPost()
         {
+            if (!ModelState.IsValid)
+            {
+                // If the model state is not valid, return the current page with the validation errors
+                return Page();
+            }
             Product existingProduct = _productRepository.GetProductById(EditProduct.ProductId);
 
             if (existingProduct == null)

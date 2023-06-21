@@ -57,7 +57,8 @@ namespace DataAccess
                 var context = new BirdMealContext();
                 // Get From Database
 
-                products = context.Products.Take(5);
+                products = context.Products.Take(5)
+                    .Where(p => p.Status == true);
 
             }
             catch (Exception ex)

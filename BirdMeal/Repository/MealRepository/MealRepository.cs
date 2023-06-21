@@ -19,5 +19,15 @@ namespace Repository.MealRepository
         {
             return MealDAO.Instance.GetMealListHot();
         }
+
+        public Meal GeMealById(string mealId)
+        {
+            return MealDAO.Instance.GeMealById(mealId);
+        }
+        public bool UpdateMeal(Meal meal)
+        {
+            return MealDAO.Instance.UpdateMeal(meal);
+        }
+
     }
 }

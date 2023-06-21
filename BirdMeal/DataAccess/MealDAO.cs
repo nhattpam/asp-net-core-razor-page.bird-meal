@@ -67,7 +67,42 @@ namespace DataAccess
             return meals;
         }
 
+        public Meal GeMealById(string mealId)
+        {
+            Meal p = null;
+
+            try
+            {
+
+                var context = new BirdMealContext();
+                p = context.Meals.SingleOrDefault(f => f.MealId.Equals(mealId)); 
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return p;
+        }
 
 
+        public bool UpdateMeal(Meal meal)
+        {
+            try
+            {
+                using (var context = new BirdMealContext())
+                {
+                    context.Meals.Update(meal);
+                    context.SaveChanges();
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred while adding the meal: {ex.Message}");
+                return false;
+            }
+        }
     }
 }
