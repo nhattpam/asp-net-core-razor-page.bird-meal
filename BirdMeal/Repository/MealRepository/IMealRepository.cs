@@ -14,5 +14,6 @@ namespace Repository.MealRepository
         public Meal GeMealById(string mealId);
 
         public bool UpdateMeal(Meal meal);
+        public bool AddMeal(Meal meal);
     }
 }

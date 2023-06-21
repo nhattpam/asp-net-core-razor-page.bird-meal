@@ -76,6 +76,11 @@ namespace BirdMeal.Pages.Staffs.Meals
         //ADD
         public IActionResult OnPostAddProduct(string mealId)
         {
+            if (AddMealProduct.Quantity == null)
+            {
+                TempData["DeleteErrorMessage"] = "Quantity is required.";
+                return RedirectToPage(new { id = mealId });
+            }
             var mealproduct = new MealProduct()
             {
                 MealId = mealId,

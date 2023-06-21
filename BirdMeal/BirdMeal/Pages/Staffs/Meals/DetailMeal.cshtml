@@ -5,6 +5,15 @@
 }
 
 <h1 class="mb-3">Detail Combo @Model.mealViewModel.MealId</h1>
+@if (!string.IsNullOrEmpty(TempData["DeleteSuccessMessage"] as string))
+{
+    <div class="alert alert-success">@TempData["DeleteSuccessMessage"]</div>
+}
+
+@if (!string.IsNullOrEmpty(TempData["DeleteErrorMessage"] as string))
+{
+    <div class="alert alert-danger">@TempData["DeleteErrorMessage"]</div>
+}
 <table class="table">
     <thead>
         <tr>
@@ -51,7 +60,7 @@
         </div>
         <div class="mb-3">
             <label for="quantity">Quantity</label>
-            <input type="number" class="form-control" id="quantity" asp-for="AddMealProduct.Quantity">
+            <input type="number" class="form-control" id="quantity" asp-for="AddMealProduct.Quantity" min="1">
         </div>
     </div>
     <button class="btn btn-primary" id="addProductBtn" type="submit">

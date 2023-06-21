@@ -29,5 +29,10 @@ namespace Repository.MealRepository
             return MealDAO.Instance.UpdateMeal(meal);
         }
 
+        public bool AddMeal(Meal meal)
+        {
+            return MealDAO.Instance.AddMeal(meal);
+        }
+
     }
 }

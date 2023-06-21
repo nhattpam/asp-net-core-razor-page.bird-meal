@@ -1,4 +1,41 @@
 ﻿@page
 @model BirdMeal.Pages.Staffs.Meals.AddMealModel
 @{
+    Layout = "~/Pages/Shared/StaffLayout.cshtml";
 }
+<h1>Add Meal</h1>
+@if (!string.IsNullOrEmpty(TempData["DeleteErrorMessage"] as string))
+{
+    <div class="alert alert-danger">@TempData["DeleteErrorMessage"]</div>
+}
+<form method="post" class="my-4" >
+    
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <label for="productName">Product Name:</label>
+        <input type="text" class="form-control" asp-for="AddMeal.MealId" required>
+        <span asp-validation-for="AddMeal.MealId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="price">Description:</label>
+        <textarea class="form-control" asp-for="AddMeal.Description" rows="4"></textarea>
+        <span asp-validation-for="AddMeal.Description" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="quantity">Routing Time:</label>
+        <input type="text" class="form-control" asp-for="AddMeal.RoutingTime" required>
+        <span asp-validation-for="AddMeal.RoutingTime" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="description">Cost:</label>
+        <input type="number" class="form-control" asp-for="AddMeal.TotalCost" required>
+        <span asp-validation-for="AddMeal.TotalCost" class="text-danger"></span>
+    </div>
+
+    
+    <button type="submit" class="btn btn-primary">Add Meal</button>
+</form>

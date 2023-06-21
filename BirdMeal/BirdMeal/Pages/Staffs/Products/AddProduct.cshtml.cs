@@ -93,7 +93,7 @@ namespace BirdMeal.Pages.Staffs.Products
             }
             else
             {
-                return RedirectToPage("/Staffs/Products/Index");
+                return RedirectToPage("/Staffs/Products/ListProduct");
             }
         }
     }

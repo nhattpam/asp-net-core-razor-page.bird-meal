@@ -104,5 +104,27 @@ namespace DataAccess
                 return false;
             }
         }
+
+        public bool AddMeal(Meal meal)
+        {
+            if (meal == null)
+                throw new ArgumentNullException(nameof(meal));
+
+            try
+            {
+                using (var context = new BirdMealContext())
+                {
+                    context.Meals.Add(meal);
+                    context.SaveChanges();
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred while adding the meal: {ex.Message}");
+                return false;
+            }
+        }
     }
 }
