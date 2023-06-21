@@ -108,8 +108,24 @@ namespace DataAccess
         }
 
 
+		public bool UpdateUser(User user)
+		{
+			try
+			{
+				using (var context = new BirdMealContext())
+				{
+					context.Users.Update(user);
+					context.SaveChanges();
+				}
+				return true;
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine($"An error occurred while update the user: {ex.Message}");
+				return false;
+			}
+		}
 
-
-    }
+	}
 
 }

@@ -14,6 +14,8 @@ namespace Repository.UserRepository
         public User GetUserById(int userId);
         public User GetUserByEmail(string email);
         public void AddUser(User c);
+        public bool UpdateUser(User user);
 
-    }
+
+	}
 }

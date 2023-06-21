@@ -34,5 +34,10 @@ namespace Repository.UserRepository
         {
             return UserDAO.Instance.Login(email, password);
         }
-    }
+		public bool UpdateUser(User user)
+        {
+            return UserDAO.Instance.UpdateUser(user);
+        }
+
+	}
 }

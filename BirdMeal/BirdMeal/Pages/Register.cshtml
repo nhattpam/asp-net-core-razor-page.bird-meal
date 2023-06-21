@@ -38,7 +38,8 @@
         </div><!-- Password input -->
         <div class="form-outline mb-10">
             <label class="form-label" for="form2Example2">Phone Number</label>
-            <input type="number" id="form2Example2" class="form-control" asp-for="AddUser.Phone" />
+            <input type="text" id="form2Example2" class="form-control" asp-for="AddUser.Phone" pattern="\d{10}" title="Please enter a 10-digit phone number" required />
+            <div class="invalid-feedback">Please enter a valid 10-digit phone number.</div>
         </div>
         <div class="form-outline mb-10">
             <label class="form-label" for="form2Example2">Address</label>
