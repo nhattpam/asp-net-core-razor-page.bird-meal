@@ -44,6 +44,7 @@ namespace BirdMeal.Pages
                     return RedirectToPage("/Error");
                 }
             }
+            ListMeals = ListHotMeal();
             ListProducts = ListHotProduct();
             return Page();
         }

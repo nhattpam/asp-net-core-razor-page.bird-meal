@@ -63,5 +63,10 @@ namespace BirdMeal.Pages
                 TransactionDate = wallet.TransactionDate
             };
         }
+
+        public void OnPost()
+        {
+
+        }
     }
 }
