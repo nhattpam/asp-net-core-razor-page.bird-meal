@@ -48,8 +48,18 @@
 					<div class="dropdown">
 						<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown"><span>@Context.Session.GetString("loginMemName")</span></a>
 						<div class="dropdown-menu">
-							<a href="/MyOrder/@Context.Session.GetString("loginMemId")" class="dropdown-item">My Order</a>
-							<a href="/MyProfile/@Context.Session.GetString("loginMemId")" class="dropdown-item">My Profile</a>
+							<a href="/MyOrder/@Context.Session.GetString("loginMemId")" class="dropdown-item">
+								<i class="fa fa-archive" aria-hidden="true"></i>
+								My Order
+							</a>
+							<a href="/MyProfile/@Context.Session.GetString("loginMemId")" class="dropdown-item">
+								<i class="fa fa-user" aria-hidden="true"></i>
+								My Profile
+							</a>
+							<a href="/MyWallet/@Context.Session.GetString("loginMemId")" class="dropdown-item">
+								<i class="fa fa-money" aria-hidden="true"></i>
+								My Wallet
+							</a>
 							<a href="/Logout" class="dropdown-item">Logout</a>
 						</div>
 					</div>

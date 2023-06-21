@@ -37,6 +37,7 @@ namespace BirdMeal.Pages
 							Email = user.Email,
 							Phone = user.Phone,
 							Address = user.Address,
+							WalletId = user.WalletId
 						};
 
                         return Page();
@@ -85,6 +86,16 @@ namespace BirdMeal.Pages
             return RedirectToPage(new { id = EditUser.UserId });
         }
 
+
+        private WalletViewModel MapWalletToViewModel(Wallet wallet)
+        {
+            return new WalletViewModel()
+            {
+                WalletId = wallet.WalletId,
+                Balance = wallet.Balance,
+                TransactionDate = wallet.TransactionDate
+            };
+        }
 
     }
 }

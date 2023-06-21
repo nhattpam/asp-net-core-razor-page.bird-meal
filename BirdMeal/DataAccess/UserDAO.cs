@@ -1,4 +1,5 @@
 ﻿using BusinessObjects.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -62,7 +63,8 @@ namespace DataAccess
             {
 
                 var context = new BirdMealContext();
-                cus = context.Users.SingleOrDefault(f => f.UserId == userId); ;
+                cus = context.Users.Include(c => c.Wallet)
+                    .SingleOrDefault(f => f.UserId == userId);
 
             }
             catch (Exception ex)

@@ -1,0 +1,14 @@
+﻿@page "{id}"
+@model BirdMeal.Pages.MyWalletModel
+@{
+}
+
+<h1>Your Account Balance</h1>
+<form method="post">
+    <div class="form-group">
+        <label for="balance">Wallet Balance:</label>
+        <input type="number" class="form-control" asp-for="EditUser.Wallet.Balance" step="0.01" required>
+        <span asp-validation-for="EditUser.Wallet.Balance" class="text-danger"></span>
+    </div>
+    <button class="btn btn-primary" type="submit">Recharge</button>
+</form>
