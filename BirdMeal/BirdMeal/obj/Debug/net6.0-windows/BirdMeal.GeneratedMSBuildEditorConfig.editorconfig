@@ -35,8 +35,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2xvYmFsc1xNZWFsc1xEZXRhaWxHbG9iYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Globals/Meals/ListMeal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2xvYmFsc1xNZWFsc1xMaXN0TWVhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Globals/Products/DetailGlobal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2xvYmFsc1xQcm9kdWN0c1xEZXRhaWxHbG9iYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Globals/Products/ListProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2xvYmFsc1xQcm9kdWN0c1xMaXN0UHJvZHVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Index.cshtml]

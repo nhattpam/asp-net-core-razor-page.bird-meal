@@ -69,7 +69,27 @@ namespace DataAccess
             return products;
         }
 
-        public bool AddProduct(Product product)
+		public IEnumerable<Product> GetProductListActive()
+		{
+			IEnumerable<Product> products = null;
+
+			try
+			{
+				var context = new BirdMealContext();
+				// Get From Database
+
+				products = context.Products.Where(p => p.Status == true);
+
+			}
+			catch (Exception ex)
+			{
+				throw new Exception(ex.Message);
+			}
+
+			return products;
+		}
+
+		public bool AddProduct(Product product)
         {
             if (product == null)
                 throw new ArgumentNullException(nameof(product));
@@ -149,6 +169,7 @@ namespace DataAccess
                 throw new Exception(ex.Message);
             }
         }
+
     }
 
 

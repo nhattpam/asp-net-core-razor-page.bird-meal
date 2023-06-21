@@ -42,20 +42,7 @@
 					</fieldset>
 				</form>
 			</div>
-			@*<div class="w3l_header_right">
-				<ul>
-					<li class="dropdown profile_details_drop">
-						@if (Context.Session.GetString("loginMemName") != null)
-						{
-							<span>@Context.Session.GetString("loginMemName")</span>
-						}
-						else
-						{
-							<a href="/Login"><i class="fa fa-user" aria-hidden="true"></i></a>
-						}
-					</li>
-				</ul>
-			</div>*@
+
 			<!-- Example split danger button -->
 			@if (Context.Session.GetString("loginMemName") != null)
 			{
@@ -114,9 +101,10 @@
 				<div class="w3ls_logo_products_left1">
 					<ul class="special_items">
 						<li><a href="/Index">Home</a><i>/</i></li>
-						<li><a href="about.html">About Us</a><i>/</i></li>
-						<li><a href="products.html">Best Deals</a><i>/</i></li>
-						<li><a href="services.html">Services</a></li>
+						<li><a href="/AboutUs">About Us</a><i>/</i></li>
+						<li><a href="~/Globals/Meals/ListMeal">Best Deals</a><i>/</i></li>
+						<li><a href="~/Globals/Products/ListProduct">Our Products</a><i>/</i></li>
+						<li><a href="/Service">Services</a></li>
 					</ul>
 				</div>
 				<div class="w3ls_logo_products_left1">

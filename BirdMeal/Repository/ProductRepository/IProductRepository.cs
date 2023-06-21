@@ -12,8 +12,9 @@ namespace Repository.ProductRepository
 		public IEnumerable<Product> GetProductList();
 		public IEnumerable<Product> GetProductListHot();
 
+		public IEnumerable<Product> GetProductListActive();
 
-        public bool AddProduct(Product product);
+		public bool AddProduct(Product product);
         public bool UpdateProduct(Product product);
 		public Product GetProductById(int productId);
 		public bool DeleteProductById(int productId);
