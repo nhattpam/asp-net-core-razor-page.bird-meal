@@ -19,5 +19,9 @@ namespace Repository.MealProductRepository
         {
             return MealProductDAO.Instance.DeleteMealProduct(mealProduct);
         }
+        public bool AddMealProduct(MealProduct mealProduct)
+        {
+            return MealProductDAO.Instance.AddMealProduct(mealProduct);
+        }
     }
 }

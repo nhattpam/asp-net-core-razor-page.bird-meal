@@ -1,16 +1,14 @@
 using BusinessObjects.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.EntityFrameworkCore;
 using Repository.UserRepository;
-using ViewModel;
 
 namespace BirdMeal.Pages.Staffs.Meals
 {
-    public class DeleteProductModel : PageModel
+    public class AddProductModel : PageModel
     {
         public IUserRepository userRepository { get; set; }
-        public DeleteProductModel()
+        public AddProductModel()
         {
             userRepository = new UserRepository();
         }
@@ -32,7 +30,5 @@ namespace BirdMeal.Pages.Staffs.Meals
             }
             return RedirectToPage("/Error");
         }
-
-      
     }
 }

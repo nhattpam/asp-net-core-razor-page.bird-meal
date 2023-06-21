@@ -24,7 +24,7 @@
                         <input type="hidden" name="productId" value="@item.Product.ProductId" />
                         <input type="hidden" name="mealId" value="@Model.mealViewModel.MealId" />
                         <button type="submit" class="btn btn-danger">
-                            <i class="fas fa-trash-alt"></i> Delete
+                            <i class="fas fa-trash-alt"></i> 
                         </button>
                     </form>
                 </td>
@@ -34,4 +34,44 @@
 
 
 </table>
-<a class="btn btn-primary"><i class="fas fa-plus-circle"></i> Add Product</a>
+<button class="btn btn-primary" id="addProductBtnAsk" type="button">
+    <i class="fas fa-plus-circle"></i> Add Product
+</button>
+<form method="post" class="mb-3" asp-page-handler="AddProduct">
+    <input type="hidden" name="mealId" value="@Model.mealViewModel.MealId" />
+    <div id="addProductSection" style="display: none;">
+        <div class="mb-3">
+            <label for="productName">Product Name</label>
+            <select class="form-control" id="productName" asp-for="AddMealProduct.ProductId">
+                @foreach (var product in Model.ListProducts)
+                {
+                    <option value="@product.ProductId">@product.ProductName</option>
+                }
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="quantity">Quantity</label>
+            <input type="number" class="form-control" id="quantity" asp-for="AddMealProduct.Quantity">
+        </div>
+    </div>
+    <button class="btn btn-primary" id="addProductBtn" type="submit">
+        <i class="fas fa-plus-circle"></i> Add Product
+    </button>
+</form>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#addProductBtn').hide();
+            // Show the "Add Product" section when the button is clicked
+            $('#addProductBtnAsk').click(function () {
+                $('#addProductSection').show();
+                $('#addProductBtnAsk').hide();
+                $('#addProductBtn').show();
+            });
+        });
+    </script>
+}
+
+
+

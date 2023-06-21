@@ -1,7 +1,9 @@
+using BirdMeal.Pages.Staffs.Products;
 using BusinessObjects.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Repository.MealProductRepository;
+using Repository.ProductRepository;
 using Repository.UserRepository;
 using System.Windows;
 using ViewModel;
@@ -15,12 +17,19 @@ namespace BirdMeal.Pages.Staffs.Meals
         public IMealProductRepository mealProductRepository { get; set; }
         [BindProperty]
         public MealViewModel mealViewModel { get; set; }
+        private IProductRepository productRepository { get; set; }
+        public IEnumerable<ProductViewModel> ListProducts { get; set; }
+        [BindProperty]
+        public MealProductViewModel AddMealProduct { get; set; }
+
 
         public DetailMealModel()
         {
             userRepository= new UserRepository();
             mealProductRepository = new MealProductRepository();
             mealViewModel = new MealViewModel();
+            productRepository = new ProductRepository();
+            AddMealProduct = new MealProductViewModel();
         }
         public IActionResult OnGet(string id)
         {
@@ -32,6 +41,8 @@ namespace BirdMeal.Pages.Staffs.Meals
                 {
                     mealViewModel.MealId = id;
                     ListMealProductsDetail = List();
+                    ListProducts = ListProductModel();
+                   
                     return Page();
                 }
             }
@@ -41,7 +52,7 @@ namespace BirdMeal.Pages.Staffs.Meals
             }
             return RedirectToPage("/Error");
         }
-
+        //DELETE
         public IActionResult OnPost(string mealId, int productId)
         {
             var mealProducts = mealProductRepository.GetMealProductByMealId(mealId);
@@ -58,6 +69,28 @@ namespace BirdMeal.Pages.Staffs.Meals
                 {
                     TempData["DeleteErrorMessage"] = "Failed to delete the meal product.";
                 }
+            }
+            return RedirectToPage(new { id = mealId });
+        }
+
+        //ADD
+        public IActionResult OnPostAddProduct(string mealId)
+        {
+            var mealproduct = new MealProduct()
+            {
+                MealId = mealId,
+                ProductId = AddMealProduct.ProductId,
+                Quantity = AddMealProduct.Quantity
+            };
+
+           bool success = mealProductRepository.AddMealProduct(mealproduct);
+            if (success)
+            {
+                TempData["DeleteSuccessMessage"] = "Meal product created successfully.";
+            }
+            else
+            {
+                TempData["DeleteErrorMessage"] = "Failed to create the meal product.";
             }
             return RedirectToPage(new { id = mealId });
         }
@@ -91,5 +124,24 @@ namespace BirdMeal.Pages.Staffs.Meals
                 Price = product.Price
             };
         }
+        private IEnumerable<ProductViewModel> ListProductModel()
+        {
+            var products = productRepository.GetProductList();
+
+            var dtos = products.Select(pro => new ProductViewModel()
+            {
+                ProductId = pro.ProductId,
+                ProductName = pro.ProductName,
+                Price = pro.Price,
+                Quantity = pro.Quantity,
+                Description = pro.Description,
+                Weight = pro.Weight,
+                Image = pro.Image,
+                Status = pro.Status
+            });
+
+            return dtos;
+        }
+       
     }
 }

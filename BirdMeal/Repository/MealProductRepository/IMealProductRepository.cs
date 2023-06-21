@@ -12,6 +12,7 @@ namespace Repository.MealProductRepository
         public IEnumerable<MealProduct> GetMealProductByMealId(string mealId);
 
         public bool DeleteMealProduct(MealProduct mealProduct);
+        public bool AddMealProduct(MealProduct mealProduct);
 
     }
 }
