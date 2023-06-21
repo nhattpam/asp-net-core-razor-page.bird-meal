@@ -11,8 +11,6 @@
 	<script type="application/x-javascript">
 		addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 			   function hideURLbar(){ window.scrollTo(0,1); } </script>
-    <link href=" ~ /my-css/css/bootstrap.css" rel="stylesheet" />
-    <link href="~/my-css/css/style.css" rel="stylesheet" />
 	<link href="~/my-css/css/font-awesome.css" rel="stylesheet" />
 	<link href="~/my-css/css/style.css" rel="stylesheet" />
 	<link href="~/my-css/css/bootstrap.css" rel="stylesheet" />
@@ -21,9 +19,9 @@
 	<script src="~/my-css/js/easing.js"></script>
 </head>
 <body>
-    <header>
+    <header >
 		<!-- header -->
-		<div class="agileits_header">
+		<div class="agileits_header" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 999; ">
 			<div class="w3l_offers">
 				<a href="products.html">Today's special Offers !</a>
 			</div>
@@ -77,21 +75,7 @@
 			
 			<div class="clearfix"> </div>
 		</div>
-		<!-- script-for sticky-nav -->
-		<script>
-			$(document).ready(function () {
-				var navoffeset = $(".agileits_header").offset().top;
-				$(window).scroll(function () {
-					var scrollpos = $(window).scrollTop();
-					if (scrollpos >= navoffeset) {
-						$(".agileits_header").addClass("fixed");
-					} else {
-						$(".agileits_header").removeClass("fixed");
-					}
-				});
-
-			});
-		</script>
+		
 		<!-- //script-for sticky-nav -->
 		<div class="logo_products">
 			<div class="container">

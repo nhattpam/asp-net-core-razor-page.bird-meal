@@ -4953,3 +4953,9 @@ input.checkbox:checked:after {
 
 
 }
+.sticky {
+	position: fixed;
+	top: 0;
+	z-index: 999;
+	/* Additional styles for the sticky header */
+}
