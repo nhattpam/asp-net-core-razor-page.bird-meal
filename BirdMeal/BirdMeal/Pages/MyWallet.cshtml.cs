@@ -2,6 +2,7 @@ using BusinessObjects.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Repository.UserRepository;
+using System.Windows;
 using ViewModel;
 
 namespace BirdMeal.Pages
@@ -63,10 +64,42 @@ namespace BirdMeal.Pages
                 TransactionDate = wallet.TransactionDate
             };
         }
-
-        public void OnPost()
+        private Wallet MapVMToVWallet(WalletViewModel walletVM)
         {
+            return new Wallet()
+            {
+                WalletId = walletVM.WalletId,
+                Balance = walletVM.Balance,
+                TransactionDate = walletVM.TransactionDate
+            };
+        }
 
+        public IActionResult OnPost()
+        {
+            var userWallet = userRepository.GetUserById(EditUser.UserId);
+            if (userWallet != null)
+            {
+                userWallet = new User()
+                {
+                    UserId = userWallet.UserId,
+                    Address = userWallet.Address,
+                    FullName = userWallet.FullName,
+                    Email = userWallet.Email,
+                    Phone = userWallet.Phone,
+                    Role = userWallet.Role,
+                    Password = userWallet.Password,
+                    Wallet = MapVMToVWallet(EditUser.Wallet)    
+                };
+                bool success = userRepository.UpdateUser(userWallet);
+                if (success)
+                {
+                    TempData["EditSuccessMessage"] = "Balance updated successfully.";
+                }
+                TempData["EditErrorMessage"] = "Balance updated failed.";
+
+            }
+
+            return RedirectToPage(new { id = EditUser.UserId });
         }
     }
 }

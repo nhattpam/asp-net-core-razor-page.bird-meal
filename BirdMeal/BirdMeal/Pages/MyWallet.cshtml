@@ -1,10 +1,25 @@
 ﻿@page "{id}"
 @model BirdMeal.Pages.MyWalletModel
 @{
+    var MessageSuccess = ViewData["EditSuccessMessage"]?.ToString();
+    var MessageError = ViewData["EditErrorMessage"]?.ToString();
 }
 
 <h1>Your Account Balance</h1>
+@if (!string.IsNullOrWhiteSpace(MessageSuccess))
+{
+    <div class="alertalert-success" role="alert">
+        @MessageSuccess
+    </div>
+}
+@if (!string.IsNullOrWhiteSpace(MessageError))
+{
+                <div class="alertalert-danger" role="alert">
+        @MessageError
+                </div>
+}
 <form method="post">
+    <input type="hidden" asp-for="EditUser.UserId" />
     <div class="form-group">
         <label for="balance">Wallet Balance:</label>
         <input type="number" class="form-control" asp-for="EditUser.Wallet.Balance" step="0.01" required>
