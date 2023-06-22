@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FU56ytKERuJLHqV0YnBPrKCvuZlZhRZYU3pGl9uq3jo=",
+  "Hash": "NA0uulMNpnkLdQ4bfsS3LIAqOQdACF6OFO/SbzWnRww=",
   "Source": "BirdMeal",
   "BasePath": "_content/BirdMeal",
   "Mode": "Default",
@@ -35358,6 +35358,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\my-css\\images\\arrow.png"
+    },
+    {
+      "Identity": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\images\\banner1.png",
+      "SourceId": "BirdMeal",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\",
+      "BasePath": "_content/BirdMeal",
+      "RelativePath": "my-css/images/banner1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\my-css\\images\\banner1.png"
     },
     {
       "Identity": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\wwwroot\\my-css\\images\\card.png",
