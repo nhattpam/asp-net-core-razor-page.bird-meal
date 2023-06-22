@@ -24,9 +24,13 @@
         </tr>
     </thead>
     <tbody>
+        @{
+            Model.Total = 0f; // Initialize a variable to store the total price
+         }
         @foreach (var item in Model.ListMealProductsDetail)
         {
-            var totalPrice = @item.Product.Price * @item.Quantity;
+            var totalPrice = (float?)@item.Product.Price * @item.Quantity;
+            Model.Total += totalPrice;
             <tr>
                 <td>@item.Product.ProductName</td>
                 <td>@item.Quantity</td>
@@ -45,13 +49,17 @@
             </tr>
         }
     </tbody>
-
-
+    
 </table>
+<h2>Total Price : <span id="totalDisplay">@Model.Total</span> $</h2>
+
+
+
 <button class="btn btn-primary" id="addProductBtnAsk" type="button">
     <i class="fas fa-plus-circle"></i> Add Product
 </button>
 <form method="post" class="mb-3" asp-page-handler="AddProduct">
+    <input type="hidden" asp-for="Total" id="totalInput" />
     <input type="hidden" name="mealId" value="@Model.mealViewModel.MealId" />
     <div id="addProductSection" style="display: none;">
         <div class="mb-3">
@@ -59,9 +67,10 @@
             <select class="form-control" id="productName" asp-for="AddMealProduct.ProductId">
                 @foreach (var product in Model.ListProducts)
                 {
-                    <option value="@product.ProductId">@product.ProductName</option>
+                    <option value="@product.ProductId" data-price="@product.Price">@product.ProductName</option>
                 }
             </select>
+
         </div>
         <div class="mb-3">
             <label for="quantity">Quantity</label>
@@ -83,9 +92,17 @@
                 $('#addProductBtnAsk').hide();
                 $('#addProductBtn').show();
             });
+
+            // Update the Total value when the quantity is changed
+            $('#quantity').on('input', function () {
+                var quantity = $(this).val();
+                var price = $('#productName option:selected').data('price'); // Retrieve the price directly
+                var total = @Model.Total + parseFloat(quantity) * parseFloat(price);
+                $('#totalInput').val(total.toFixed(2));
+                $('#totalDisplay').text(total.toFixed(2)); // Update the total display
+            });
         });
     </script>
 }
-
 
 

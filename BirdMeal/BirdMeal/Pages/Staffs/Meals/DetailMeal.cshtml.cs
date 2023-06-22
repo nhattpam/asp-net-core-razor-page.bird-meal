@@ -3,6 +3,7 @@ using BusinessObjects.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Repository.MealProductRepository;
+using Repository.MealRepository;
 using Repository.ProductRepository;
 using Repository.UserRepository;
 using System.Windows;
@@ -23,7 +24,9 @@ namespace BirdMeal.Pages.Staffs.Meals
         public MealProductViewModel AddMealProduct { get; set; }
 
         [BindProperty]
-        public double Price { get; set; }
+        public float? Total { get; set; }
+
+        private IMealRepository mealRepository { get; set; }
 
 
         public DetailMealModel()
@@ -33,6 +36,7 @@ namespace BirdMeal.Pages.Staffs.Meals
             mealViewModel = new MealViewModel();
             productRepository = new ProductRepository();
             AddMealProduct = new MealProductViewModel();
+            mealRepository = new MealRepository();
         }
         public IActionResult OnGet(string id)
         {
@@ -45,7 +49,7 @@ namespace BirdMeal.Pages.Staffs.Meals
                     mealViewModel.MealId = id;
                     ListMealProductsDetail = List();
                     ListProducts = ListProductModel();
-                   
+                    
                     return Page();
                 }
             }
@@ -66,6 +70,9 @@ namespace BirdMeal.Pages.Staffs.Meals
 
                 if (success)
                 {
+                    var meal = mealRepository.GeMealById(mealId);
+                    meal.TotalCost = Total;
+                    //mealRepository.UpdateMeal(meal);
                     TempData["DeleteSuccessMessage"] = "Meal product deleted successfully.";
                 }
                 else
@@ -90,10 +97,14 @@ namespace BirdMeal.Pages.Staffs.Meals
                 ProductId = AddMealProduct.ProductId,
                 Quantity = AddMealProduct.Quantity
             };
+            
 
-           bool success = mealProductRepository.AddMealProduct(mealproduct);
+            bool success = mealProductRepository.AddMealProduct(mealproduct);
             if (success)
             {
+                var meal = mealRepository.GeMealById(mealId);
+                meal.TotalCost = Total;
+                mealRepository.UpdateMeal(meal);
                 TempData["DeleteSuccessMessage"] = "Meal product created successfully.";
             }
             else

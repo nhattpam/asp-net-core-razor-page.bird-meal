@@ -53,7 +53,7 @@ namespace BirdMeal.Pages.Staffs.Meals
                 {
                     MealId = AddMeal.MealId,
                     Description = AddMeal.Description,
-                    TotalCost = AddMeal.TotalCost,
+                    TotalCost = 0,
                     RoutingTime = AddMeal.RoutingTime
                 };
 
