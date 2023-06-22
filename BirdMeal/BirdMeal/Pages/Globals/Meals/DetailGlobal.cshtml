@@ -3,16 +3,59 @@
 @{
 
 }
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    img.card-img-top {
+        width: 50px;
+        height: 70px;
+    }
+</style>
 
 <div class="container">
     <h1 class="mb-3">Detail Combo @Model.MealModel.MealId</h1>
 
-    @foreach (var item in Model.MealDetail)
-    {
-        <div>
-            <h3>@item.Product.ProductName</h3>
-            <input type="number" class="form-control" value="@item.Quantity" />
-        </div>
-    }
+    <table>
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Product Name</th>
+                <th>Quanttiy</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.MealDetail)
+            {
+                <tr>
+                    <td>
+                        <a href="~/Globals/Products/DetailGlobal/@item.Product.ProductId"><img class="card-img-top" src="~/images/@item.Product.Image" alt="Card image" style="width: 50px; height: 70px"></a>
+                    </td>
+                    <td>
+                        @item.Product.ProductName
+                    </td>
+                    <td>
+                        <input type="number" class="form-control" value="@item.Quantity" />
+                    </td>
+                    <td>
+                         <a style="outline:none" href="~/Globals/Products/DetailGlobal/@item.Product.ProductId">Detail</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
     <a class="btn btn-primary mt-3">Add to cart</a>
 </div>

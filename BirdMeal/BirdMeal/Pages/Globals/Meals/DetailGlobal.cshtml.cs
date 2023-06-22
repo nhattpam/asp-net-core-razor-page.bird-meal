@@ -44,7 +44,8 @@ namespace BirdMeal.Pages.Globals.Meals
                 ProductId = product.ProductId,
                 ProductName = product.ProductName,
                 Quantity = product.Quantity,
-                Price = product.Price
+                Price = product.Price,
+                Image = product.Image
             };
         }
     }
