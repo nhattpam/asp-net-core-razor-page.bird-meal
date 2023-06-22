@@ -19,15 +19,20 @@
         <tr>
             <th>Product</th>
             <th>Quantity</th>
+            <th>Price</th>
             <th></th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model.ListMealProductsDetail)
         {
+            var totalPrice = @item.Product.Price * @item.Quantity;
             <tr>
                 <td>@item.Product.ProductName</td>
                 <td>@item.Quantity</td>
+                <td>
+                    @totalPrice $
+                </td>
                 <td>
                     <form method="post">
                         <input type="hidden" name="productId" value="@item.Product.ProductId" />

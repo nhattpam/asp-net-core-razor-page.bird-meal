@@ -38,6 +38,7 @@ namespace DataAccess
 
                 var context = new BirdMealContext();
                 os = context.MealProducts.Include(pro => pro.Product)
+                    .Include(k => k.Meal)
                     .Where(c => c.MealId.Equals(mealId));
 
             }

@@ -8,141 +8,141 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BirdMeal
 build_property.RootNamespace = BirdMeal
-build_property.ProjectDir = F:\FPT_SUBJECTS\Semester_7\PRN221\BirdMeal\BirdMeal\
+build_property.ProjectDir = F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\BirdMeal\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = F:\FPT_SUBJECTS\Semester_7\PRN221\BirdMeal\BirdMeal
+build_property.MSBuildProjectDirectory = F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\BirdMeal
 build_property._RazorSourceGeneratorDebug = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/Admins/Accounts/AddAccount.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Admins/Accounts/AddAccount.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5zXEFjY291bnRzXEFkZEFjY291bnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/Admins/Accounts/ListAccount.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Admins/Accounts/ListAccount.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5zXEFjY291bnRzXExpc3RBY2NvdW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/Admins/Index.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Admins/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/Cart.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Cart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/Error.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/Globals/Meals/DetailGlobal.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Globals/Meals/DetailGlobal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2xvYmFsc1xNZWFsc1xEZXRhaWxHbG9iYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/Globals/Meals/ListMeal.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Globals/Meals/ListMeal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2xvYmFsc1xNZWFsc1xMaXN0TWVhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/Globals/Products/DetailGlobal.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Globals/Products/DetailGlobal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2xvYmFsc1xQcm9kdWN0c1xEZXRhaWxHbG9iYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/Globals/Products/ListProduct.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Globals/Products/ListProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2xvYmFsc1xQcm9kdWN0c1xMaXN0UHJvZHVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/Index.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/Login.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/Logout.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/MyOrder.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/MyOrder.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXlPcmRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/MyProfile.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/MyProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXlQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/MyWallet.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/MyWallet.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXlXYWxsZXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/Privacy.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/Register.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/Shared/AdminLayout.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Shared/AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXEFkbWluTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/Shared/StaffLayout.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Shared/StaffLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXFN0YWZmTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/Staffs/Index.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Staffs/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhZmZzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/Staffs/Meals/AddMeal.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Staffs/Meals/AddMeal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhZmZzXE1lYWxzXEFkZE1lYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/Staffs/Meals/DetailMeal.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Staffs/Meals/DetailMeal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhZmZzXE1lYWxzXERldGFpbE1lYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/Staffs/Meals/EditMeal.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Staffs/Meals/EditMeal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhZmZzXE1lYWxzXEVkaXRNZWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/Staffs/Meals/ListMeal.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Staffs/Meals/ListMeal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhZmZzXE1lYWxzXExpc3RNZWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/Staffs/Orders/ListOrder.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Staffs/Orders/ListOrder.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhZmZzXE9yZGVyc1xMaXN0T3JkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/Staffs/Products/AddProduct.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Staffs/Products/AddProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhZmZzXFByb2R1Y3RzXEFkZFByb2R1Y3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/Staffs/Products/DeleteProduct.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Staffs/Products/DeleteProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhZmZzXFByb2R1Y3RzXERlbGV0ZVByb2R1Y3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/Staffs/Products/EditProduct.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Staffs/Products/EditProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhZmZzXFByb2R1Y3RzXEVkaXRQcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/Staffs/Products/ListProduct.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Staffs/Products/ListProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhZmZzXFByb2R1Y3RzXExpc3RQcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/_ViewImports.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/_ViewStart.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/FPT_SUBJECTS/Semester_7/PRN221/BirdMeal/BirdMeal/Pages/Shared/_Layout.cshtml]
+[F:/FPT_SUBJECTS/Semester_7/PRN221/Project/asp-net-core-razor-page.bird-meal/BirdMeal/BirdMeal/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-halycfifab

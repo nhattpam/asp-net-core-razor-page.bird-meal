@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DU4m8FIj5Hn0/vMLYiXtmujAfIQgE5SjshFH5cfUQCs2w83TdLR/eUTISx8o2Z0NQHDjNzusUT65eof+Zsh2yQ==",
+  "dgSpecHash": "5EnuiNuTwZAwmhHG0ANZ2tyoFsy+6A79eXVgIYmHewRorbWp2EMFT0lHF8pTtsV1zmu7BToywqUBd9QbS8F/aQ==",
   "success": true,
-  "projectFilePath": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\BirdMeal\\BirdMeal\\BirdMeal.csproj",
+  "projectFilePath": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BirdMeal\\BirdMeal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

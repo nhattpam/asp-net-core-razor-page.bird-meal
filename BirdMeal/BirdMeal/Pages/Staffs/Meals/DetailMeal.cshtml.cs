@@ -22,6 +22,9 @@ namespace BirdMeal.Pages.Staffs.Meals
         [BindProperty]
         public MealProductViewModel AddMealProduct { get; set; }
 
+        [BindProperty]
+        public double Price { get; set; }
+
 
         public DetailMealModel()
         {
