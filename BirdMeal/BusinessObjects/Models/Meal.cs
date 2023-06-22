@@ -8,6 +8,7 @@ namespace BusinessObjects.Models
         public Meal()
         {
             MealProducts = new HashSet<MealProduct>();
+            OrderDetails = new HashSet<OrderDetail>();
         }
 
         public string MealId { get; set; } = null!;
@@ -16,5 +17,6 @@ namespace BusinessObjects.Models
         public double? TotalCost { get; set; }
 
         public virtual ICollection<MealProduct> MealProducts { get; set; }
+        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }

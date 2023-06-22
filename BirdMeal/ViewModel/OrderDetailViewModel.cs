@@ -9,17 +9,13 @@ namespace ViewModel
 {
     public class OrderDetailViewModel
     {
-        public OrderDetailViewModel()
-        {
-            Bills = new HashSet<BillViewModel>();
-        }
-
         public int OrderDetailId { get; set; }
         public int? OrderId { get; set; }
         public int? Quantity { get; set; }
         public double? UnitPrice { get; set; }
+        public string? MealId { get; set; }
 
-        public virtual OrderViewModel? Order { get; set; }
-        public virtual ICollection<BillViewModel> Bills { get; set; }
+        public virtual MealViewModel? Meal { get; set; }
+        public virtual OrderDetail? Order { get; set; }
     }
 }

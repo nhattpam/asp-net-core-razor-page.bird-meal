@@ -2387,11 +2387,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BusinessObjects\\BusinessObjects.csproj",
+      "projectUniqueName": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\BirdMeal\\BusinessObjects\\BusinessObjects.csproj",
       "projectName": "BusinessObjects",
-      "projectPath": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BusinessObjects\\BusinessObjects.csproj",
+      "projectPath": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\BirdMeal\\BusinessObjects\\BusinessObjects.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\Project\\asp-net-core-razor-page.bird-meal\\BirdMeal\\BusinessObjects\\obj\\",
+      "outputPath": "F:\\FPT_SUBJECTS\\Semester_7\\PRN221\\BirdMeal\\BusinessObjects\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

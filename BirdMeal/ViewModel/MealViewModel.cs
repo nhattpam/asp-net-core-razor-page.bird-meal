@@ -12,6 +12,7 @@ namespace ViewModel
         public MealViewModel()
         {
             MealProducts = new HashSet<MealProductViewModel>();
+            OrderDetails = new HashSet<OrderDetailViewModel>();
         }
 
         public string MealId { get; set; } = null!;
@@ -20,5 +21,6 @@ namespace ViewModel
         public double? TotalCost { get; set; }
 
         public virtual ICollection<MealProductViewModel> MealProducts { get; set; }
+        public virtual ICollection<OrderDetailViewModel> OrderDetails { get; set; }
     }
 }

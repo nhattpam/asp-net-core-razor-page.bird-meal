@@ -18,7 +18,6 @@ namespace BusinessObjects.Models
         {
         }
 
-        public virtual DbSet<Bill> Bills { get; set; } = null!;
         public virtual DbSet<Meal> Meals { get; set; } = null!;
         public virtual DbSet<MealProduct> MealProducts { get; set; } = null!;
         public virtual DbSet<Order> Orders { get; set; } = null!;
@@ -42,25 +41,6 @@ namespace BusinessObjects.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Bill>(entity =>
-            {
-                entity.Property(e => e.BillId).HasColumnName("billID");
-
-                entity.Property(e => e.MealProductId).HasColumnName("meal_product_ID");
-
-                entity.Property(e => e.OrderDetailId).HasColumnName("orderDetailID");
-
-                entity.HasOne(d => d.MealProduct)
-                    .WithMany(p => p.Bills)
-                    .HasForeignKey(d => d.MealProductId)
-                    .HasConstraintName("FK__Bills__meal_prod__1ED998B2");
-
-                entity.HasOne(d => d.OrderDetail)
-                    .WithMany(p => p.Bills)
-                    .HasForeignKey(d => d.OrderDetailId)
-                    .HasConstraintName("FK__Bills__orderDeta__1FCDBCEB");
-            });
-
             modelBuilder.Entity<Meal>(entity =>
             {
                 entity.Property(e => e.MealId)
@@ -133,11 +113,21 @@ namespace BusinessObjects.Models
 
                 entity.Property(e => e.OrderDetailId).HasColumnName("orderDetailID");
 
+                entity.Property(e => e.MealId)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("mealID");
+
                 entity.Property(e => e.OrderId).HasColumnName("orderID");
 
                 entity.Property(e => e.Quantity).HasColumnName("quantity");
 
                 entity.Property(e => e.UnitPrice).HasColumnName("unitPrice");
+
+                entity.HasOne(d => d.Meal)
+                    .WithMany(p => p.OrderDetails)
+                    .HasForeignKey(d => d.MealId)
+                    .HasConstraintName("FK_Order_Details_Meals");
 
                 entity.HasOne(d => d.Order)
                     .WithMany(p => p.OrderDetails)

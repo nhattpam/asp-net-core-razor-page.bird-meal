@@ -9,11 +9,6 @@ namespace ViewModel
 {
     public class MealProductViewModel
     {
-        public MealProductViewModel()
-        {
-            Bills = new HashSet<BillViewModel>();
-        }
-
         public int MealProductId { get; set; }
         public string? MealId { get; set; }
         public int? ProductId { get; set; }
@@ -21,6 +16,5 @@ namespace ViewModel
 
         public virtual MealViewModel? Meal { get; set; }
         public virtual ProductViewModel? Product { get; set; }
-        public virtual ICollection<BillViewModel> Bills { get; set; }
     }
 }
