@@ -1,4 +1,4 @@
-﻿@page "{id}"
+﻿@page "{id}/{total?}"
 @model BirdMeal.Pages.Staffs.Meals.DetailMealModel
 @{
     Layout = "~/Pages/Shared/StaffLayout.cshtml";
@@ -39,6 +39,7 @@
                 </td>
                 <td>
                     <form method="post">
+                        <input type="hidden" name="total" asp-for="@Model.Total" />
                         <input type="hidden" name="productId" value="@item.Product.ProductId" />
                         <input type="hidden" name="mealId" value="@Model.mealViewModel.MealId" />
                         <button type="submit" class="btn btn-danger">

@@ -60,7 +60,7 @@ namespace BirdMeal.Pages.Staffs.Meals
             return RedirectToPage("/Error");
         }
         //DELETE
-        public IActionResult OnPost(string mealId, int productId)
+        public IActionResult OnPost(string mealId, int productId, float? total)
         {
             var mealProducts = mealProductRepository.GetMealProductByMealId(mealId);
             var mealProductToDelete = mealProducts.FirstOrDefault(mp => mp.ProductId == productId);
@@ -71,8 +71,9 @@ namespace BirdMeal.Pages.Staffs.Meals
                 if (success)
                 {
                     var meal = mealRepository.GeMealById(mealId);
-                    meal.TotalCost = Total;
-                    //mealRepository.UpdateMeal(meal);
+                    meal.TotalCost = mealProducts.Sum(mp => mp.Product.Price * mp.Quantity); // Calculate the updated total
+
+                    mealRepository.UpdateMeal(meal);
                     TempData["DeleteSuccessMessage"] = "Meal product deleted successfully.";
                 }
                 else

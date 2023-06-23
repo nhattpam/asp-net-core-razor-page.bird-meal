@@ -83,7 +83,6 @@ namespace BirdMeal.Pages.Staffs.Meals
 
             existingMeal.Description = EditMeal.Description;
             existingMeal.RoutingTime = EditMeal.RoutingTime;
-            existingMeal.TotalCost = EditMeal.TotalCost;
 
             bool success = _mealRepository.UpdateMeal(existingMeal);
             if (success)
