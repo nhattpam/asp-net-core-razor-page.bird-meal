@@ -10,7 +10,7 @@ namespace Repository.WalletRepository
 {
     public class WalletRepository : IWalletRepository
     {
-        public int AddWallet()
+        public int? AddWallet()
         {
             return WalletDAO.Instance.AddWallet();
         }

@@ -68,8 +68,8 @@ namespace BirdMeal.Pages
         {
             return new Wallet()
             {
-                WalletId = walletVM.WalletId,
-                Balance = walletVM.Balance,
+                WalletId = EditUser.WalletId,
+				Balance = walletVM.Balance,
                 TransactionDate = walletVM.TransactionDate
             };
         }
@@ -88,8 +88,10 @@ namespace BirdMeal.Pages
                     Phone = userWallet.Phone,
                     Role = userWallet.Role,
                     Password = userWallet.Password,
-                    Wallet = MapVMToVWallet(EditUser.Wallet)    
+                    WalletId = userWallet.WalletId,
+                    Wallet = userWallet.Wallet
                 };
+                userWallet.Wallet.Balance = EditUser.Wallet.Balance;
                 bool success = userRepository.UpdateUser(userWallet);
                 if (success)
                 {

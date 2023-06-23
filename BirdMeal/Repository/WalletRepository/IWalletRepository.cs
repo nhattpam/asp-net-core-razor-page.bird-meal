@@ -9,6 +9,6 @@ namespace Repository.WalletRepository
 {
     public interface IWalletRepository
     {
-        public int AddWallet();
+        public int? AddWallet();
     }
 }

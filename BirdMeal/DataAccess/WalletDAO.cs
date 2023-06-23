@@ -29,7 +29,7 @@ namespace DataAccess
             }
         }
 
-        public int AddWallet()
+        public int? AddWallet()
         {
             Wallet w = null;
             try

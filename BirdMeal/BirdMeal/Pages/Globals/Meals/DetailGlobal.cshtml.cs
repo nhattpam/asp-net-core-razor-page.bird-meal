@@ -2,6 +2,7 @@ using BusinessObjects.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Repository.MealProductRepository;
+using Repository.UserRepository;
 using System.Windows;
 using ViewModel;
 
@@ -9,7 +10,8 @@ namespace BirdMeal.Pages.Globals.Meals
 {
     public class DetailGlobalModel : PageModel
     {
-        private IMealProductRepository mealProductRepository { get; set; }
+		private IUserRepository userRepository { get; set; }
+		private IMealProductRepository mealProductRepository { get; set; }
         public IEnumerable<MealProductViewModel> MealDetail { get; set; }
         [BindProperty]
         public MealViewModel MealModel { get; set; }
@@ -20,14 +22,33 @@ namespace BirdMeal.Pages.Globals.Meals
         {
             mealProductRepository = new MealProductRepository();
             MealModel = new MealViewModel();
-        }
-        public void OnGet(string id)
-        {
-            MealModel.MealId = id;
-            MealDetail = List();
+            userRepository = new UserRepository();
         }
 
-        public IEnumerable<MealProductViewModel> List()
+		public IActionResult OnGet(string id)
+		{
+			string loginMem = HttpContext.Session.GetString("loginMem");
+
+			if (loginMem == null)
+			{
+				MealModel.MealId = id;
+				MealDetail = List();
+				return Page();
+			}
+			else
+			{
+				User u = userRepository.GetUserByEmail(loginMem);
+				if (u.Role.Equals("STAFF") || u.Role.Equals("ADMIN"))
+				{
+					return RedirectToPage("/Error");
+				}
+			}
+			MealModel.MealId = id;
+			MealDetail = List();
+			return Page();
+		}
+
+		public IEnumerable<MealProductViewModel> List()
         {
             var orderDetailsByOrderId = mealProductRepository.GetMealProductByMealId(MealModel.MealId);
 
