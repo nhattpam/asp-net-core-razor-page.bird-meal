@@ -32,9 +32,9 @@ namespace BirdMeal.Pages
 			return RedirectToPage("/Login");
 		}
 
-		public void OnPost(float? total)
+		public void OnPost()
 		{
-			MessageBox.Show(total.ToString());
+			
 		}
 	}
 }
