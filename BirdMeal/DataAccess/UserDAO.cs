@@ -83,7 +83,9 @@ namespace DataAccess
             {
 
                 var context = new BirdMealContext();
-                cus = context.Users.SingleOrDefault(f => f.Email.Equals(email.Trim()));
+                cus = context.Users
+                    .Include(w => w.Wallet)
+                    .SingleOrDefault(f => f.Email.Equals(email.Trim()));
 
             }
             catch (Exception ex)
