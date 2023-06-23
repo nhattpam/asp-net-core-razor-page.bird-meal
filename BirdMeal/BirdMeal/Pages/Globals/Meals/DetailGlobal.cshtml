@@ -27,7 +27,7 @@
 
 <div class="container">
     <h1 class="mb-3">Detail Combo @Model.MealModel.MealId</h1>
-
+    
     <table>
         <thead>
             <tr>
@@ -46,6 +46,7 @@
             {
                 var totalPrice = (float?)(item.Quantity * item.Product.Price);
                 Model.Total += totalPrice;
+                var exceededQuantityClass = item.Quantity > item.Product.Quantity ? "exceeded-quantity" : string.Empty;
                 <tr>
                     <td>
                         <a href="~/Globals/Products/DetailGlobal/@item.Product.ProductId">
@@ -56,7 +57,11 @@
                         @item.Product.ProductName
                     </td>
                     <td>
-                        <input type="number" class="form-control quantity-input" value="@item.Quantity" data-price="@item.Product.Price" />
+                        <input type="number" class="form-control quantity-input" value="@item.Quantity" data-price="@item.Product.Price" max="@item.Product.Quantity" />
+                        @if (exceededQuantityClass != string.Empty)
+                        {
+                            <span class="@exceededQuantityClass">Quantity exceeded</span>
+                        }
                     </td>
                     <td class="price-column">
                         @totalPrice $
@@ -69,7 +74,9 @@
         </tbody>
     </table>
     <h2>Total Price : <span id="totalDisplay">@Model.Total</span> $</h2>
-    
+    <div class="alert alert-danger" role="alert" style="display: none">
+        Quantity exceeded for some products.
+    </div>
     <form asp-page="/Cart" method="post" asp-page-handler="AddToCart">
         <input type="hidden" name="userId" asp-for="@Model.UserId" />
         <input type="hidden" name="total" asp-for="@Model.Total" />
@@ -92,6 +99,38 @@
                     total += totalPrice;
                 });
                 $('#totalDisplay').text(total.toFixed(2));
+            });
+
+
+            // Update the prices and total when the quantity inputs change
+            $('.quantity-input').on('input', function () {
+                var total = 0;
+                var exceededQuantity = false;
+                $('.quantity-input').each(function () {
+                    var quantity = $(this).val();
+                    var price = $(this).data('price');
+                    var totalPrice = parseFloat(quantity) * parseFloat(price);
+                    var priceColumn = $(this).closest('tr').find('.price-column');
+                    priceColumn.text(totalPrice.toFixed(2) + ' $');
+                    total += totalPrice;
+
+                    var productQuantity = parseInt($(this).attr('max'));
+                    if (quantity > productQuantity) {
+                        exceededQuantity = true;
+                        $(this).closest('tr').find('.exceeded-quantity').show();
+                    } else {
+                        $(this).closest('tr').find('.exceeded-quantity').hide();
+                    }
+                });
+                $('#totalDisplay').text(total.toFixed(2));
+
+                if (exceededQuantity) {
+                    $('.alert-danger').show();
+                    $('button[type="submit"]').prop('disabled', true);
+                } else {
+                    $('.alert-danger').hide();
+                    $('button[type="submit"]').prop('disabled', false);
+                }
             });
         });
     </script>
