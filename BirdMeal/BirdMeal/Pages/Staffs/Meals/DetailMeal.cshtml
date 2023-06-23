@@ -59,7 +59,7 @@
 <button class="btn btn-primary" id="addProductBtnAsk" type="button">
     <i class="fas fa-plus-circle"></i> Add Product
 </button>
-<form method="post" class="mb-3" asp-page-handler="AddProduct" onsubmit="return validateQuantity()">
+<form method="post" class="mb-3" asp-page-handler="AddProduct" onsubmit="return validateForm()">
     <input type="hidden" asp-for="Total" id="totalInput" />
     <input type="hidden" name="mealId" value="@Model.mealViewModel.MealId" />
     <div id="addProductSection" style="display: none;">
@@ -104,6 +104,25 @@
             });
         });
 
+        function validateForm() {
+            if (!validateQuantity()) {
+                return false; // Prevent form submission if quantity validation fails
+            }
+
+            var selectedProductId = $('#productName').val();
+            var existingProducts = [];
+            $('input[name="productId"]').each(function () {
+                existingProducts.push($(this).val());
+            });
+
+            if (existingProducts.includes(selectedProductId)) {
+                alert('Product already added.');
+                return false; // Prevent form submission if duplicate product is found
+            }
+
+            return true; // Proceed with form submission
+        }
+
         function validateQuantity() {
             var selectedQuantity = parseInt(document.getElementById('quantity').value);
             var maxQuantity = parseInt(document.getElementById('productName').options[document.getElementById('productName').selectedIndex].getAttribute('data-quantity'));
@@ -117,5 +136,3 @@
         }
     </script>
 }
-
-
