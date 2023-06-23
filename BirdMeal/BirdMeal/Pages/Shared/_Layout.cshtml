@@ -32,13 +32,15 @@
 				</form>
 			</div>
 			<div class="product_list_header">
-				<form  method="post" class="last" asp-page="Cart">
+				<div class="last">
 					<fieldset>
-						<input type="hidden" name="cmd" value="_cart" />
-						<input type="hidden" name="display" value="1" />
-						<input type="submit" name="submit" value="View your cart" class="button" />
+						<a style="color: white" href="Cart" class="btn btn-success">
+							<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+							 View your cart
+						</a>
 					</fieldset>
-				</form>
+				</div>
+				
 			</div>
 
 			<!-- Example split danger button -->
