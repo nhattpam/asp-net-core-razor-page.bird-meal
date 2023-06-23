@@ -69,9 +69,12 @@
         </tbody>
     </table>
     <h2>Total Price : <span id="totalDisplay">@Model.Total</span> $</h2>
-    <a class="btn btn-primary mt-3">Add to cart</a>
-    <form>
-        
+    
+    <form asp-page="/Cart" method="post" asp-page-handler="AddToCart">
+        <input type="hidden" name="userId" asp-for="@Model.UserId" />
+        <input type="hidden" name="total" asp-for="@Model.Total" />
+        <input type="hidden" name="mealId" asp-for="@Model.MealModel.MealId" />
+        <button class="btn btn-primary mt-3" type="submit">Add to cart</button>
     </form>
 </div>
 @section Scripts {

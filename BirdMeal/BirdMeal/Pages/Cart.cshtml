@@ -79,7 +79,6 @@
 			<h3>Chec<span>kout</span></h3>
 
 			<div class="checkout-right">
-				<h4>Your shopping cart contains: <span>3 Products</span></h4>
 				<table class="timetable_sub">
 					<thead>
 						<tr>
@@ -93,21 +92,26 @@
 						</tr>
 					</thead>
 					<tbody>
+						@{
+							int counter = 1;
+						}
 						<tr class="rem1">
-							<td class="invert">1</td>
-							<td class="invert-image"><a href="single.html"><img src="images/1.png" alt=" " class="img-responsive"></a></td>
+							<td class="invert">@counter</td>
+                            <td class="invert-image">
+                                <img src="~/images/combo.jpg" class="img-responsive" style="width:50px; height:65px" />
+                            </td>
 							<td class="invert">
 								<div class="quantity">
-									<div class="quantity-select">
-										<div class="entry value-minus">&nbsp;</div>
-										<div class="entry value"><span>1</span></div>
-										<div class="entry value-plus active">&nbsp;</div>
+									<div class="input-group w-auto justify-content-end align-items-center">
+										<input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="quantity">
+										<input type="number" step="1" max="10" value="1" name="quantity" class="quantity-field border-0 text-center w-25">
+										<input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="quantity">
 									</div>
 								</div>
 							</td>
-							<td class="invert">Fortune Sunflower Oil</td>
+							<td class="invert">MealId</td>
 
-							<td class="invert">$290.00</td>
+							<td class="invert">Total</td>
 							<td class="invert">
 								<div class="rem">
 									<div class="close1"> </div>
@@ -115,51 +119,7 @@
 
 							</td>
 						</tr>
-						<tr class="rem2">
-							<td class="invert">2</td>
-							<td class="invert-image"><a href="single.html"><img src="images/3.png" alt=" " class="img-responsive"></a></td>
-							<td class="invert">
-								<div class="quantity">
-									<div class="quantity-select">
-										<div class="entry value-minus">&nbsp;</div>
-										<div class="entry value"><span>1</span></div>
-										<div class="entry value-plus active">&nbsp;</div>
-									</div>
-								</div>
-							</td>
-							<td class="invert">Basmati Rise (5 Kg)</td>
-
-							<td class="invert">$250.00</td>
-							<td class="invert">
-								<div class="rem">
-									<div class="close2"> </div>
-								</div>
-
-							</td>
-						</tr>
-						<tr class="rem3">
-							<td class="invert">3</td>
-							<td class="invert-image"><a href="single.html"><img src="images/2.png" alt=" " class="img-responsive"></a></td>
-							<td class="invert">
-								<div class="quantity">
-									<div class="quantity-select">
-										<div class="entry value-minus">&nbsp;</div>
-										<div class="entry value"><span>1</span></div>
-										<div class="entry value-plus active">&nbsp;</div>
-									</div>
-								</div>
-							</td>
-							<td class="invert">Pepsi Soft Drink (2 Ltr)</td>
-
-							<td class="invert">$15.00</td>
-							<td class="invert">
-								<div class="rem">
-									<div class="close3"> </div>
-								</div>
-
-							</td>
-						</tr>
-
+						@*counter++;*@
 					</tbody>
 				</table>
 			</div>
@@ -228,3 +188,40 @@
 	<div class="clearfix"></div>
 </div>
 <!-- //banner -->
+@section Scripts {
+	<script>
+		function incrementValue(e) {
+			e.preventDefault();
+			var fieldName = $(e.target).data('field');
+			var parent = $(e.target).closest('div');
+			var currentVal = parseInt(parent.find('input[name=' + fieldName + ']').val(), 10);
+
+			if (!isNaN(currentVal)) {
+				parent.find('input[name=' + fieldName + ']').val(currentVal + 1);
+			} else {
+				parent.find('input[name=' + fieldName + ']').val(0);
+			}
+		}
+
+		function decrementValue(e) {
+			e.preventDefault();
+			var fieldName = $(e.target).data('field');
+			var parent = $(e.target).closest('div');
+			var currentVal = parseInt(parent.find('input[name=' + fieldName + ']').val(), 10);
+
+			if (!isNaN(currentVal) && currentVal > 0) {
+				parent.find('input[name=' + fieldName + ']').val(currentVal - 1);
+			} else {
+				parent.find('input[name=' + fieldName + ']').val(0);
+			}
+		}
+
+		$('.input-group').on('click', '.button-plus', function (e) {
+			incrementValue(e);
+		});
+
+		$('.input-group').on('click', '.button-minus', function (e) {
+			decrementValue(e);
+		});
+	</script>
+}

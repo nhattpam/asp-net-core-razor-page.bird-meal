@@ -12,12 +12,15 @@ namespace BirdMeal.Pages.Globals.Meals
     {
 		private IUserRepository userRepository { get; set; }
 		private IMealProductRepository mealProductRepository { get; set; }
-        public IEnumerable<MealProductViewModel> MealDetail { get; set; }
+        public IEnumerable<MealProductViewModel> MealDetail { get; set; } = new List<MealProductViewModel>();
         [BindProperty]
         public MealViewModel MealModel { get; set; }
 
         [BindProperty]
         public float? Total { get; set; }
+
+        [BindProperty]
+        public int UserId { get; set; }
         public DetailGlobalModel()
         {
             mealProductRepository = new MealProductRepository();
@@ -41,8 +44,11 @@ namespace BirdMeal.Pages.Globals.Meals
 				if (u.Role.Equals("STAFF") || u.Role.Equals("ADMIN"))
 				{
 					return RedirectToPage("/Error");
-				}
-			}
+                }
+                //gan de ban qua Cart
+                UserId = u.UserId;
+            }
+            
 			MealModel.MealId = id;
 			MealDetail = List();
 			return Page();

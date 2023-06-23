@@ -45,10 +45,32 @@ namespace BirdMeal.Pages
 			return RedirectToPage("/Login");
 		}
 
-		public void OnPost()
-		{
-			
-		}
+        public IActionResult OnPostAddToCart(int userId, string mealId, float? total)
+        {
+            string loginMem = HttpContext.Session.GetString("loginMem");
+            if (loginMem != null)
+            {
+                User u = userRepository.GetUserByEmail(loginMem);
+                if (u != null && u.Role.Equals("CUSTOMER"))
+                {
+                    UserCart = new UserViewModel()
+                    {
+                        UserId = u.UserId,
+                        Phone = u.Phone,
+                        Email = u.Email,
+                        Address = u.Address,
+                        Wallet = MapWalletToViewModel(u.Wallet),
+                        FullName = u.FullName
+                    };
+                    return Page();
+                }
+            }
+            else
+            {
+                return RedirectToPage("/Login");
+            }
+            return RedirectToPage("/Login");
+        }
 
         private WalletViewModel MapWalletToViewModel(Wallet wallet)
         {
