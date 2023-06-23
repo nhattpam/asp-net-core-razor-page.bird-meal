@@ -33,13 +33,19 @@
             <tr>
                 <th>Image</th>
                 <th>Product Name</th>
-                <th>Quanttiy</th>
+                <th>Quantity</th>
+                <th>Price</th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
+            @{
+                Model.Total = 0f; // Initialize a variable to store the total price
+            }
             @foreach (var item in Model.MealDetail)
             {
+                var totalPrice = (float?)(item.Quantity * item.Product.Price);
+                Model.Total += totalPrice;
                 <tr>
                     <td>
                         <a href="~/Globals/Products/DetailGlobal/@item.Product.ProductId"><img class="card-img-top" src="~/images/@item.Product.Image" alt="Card image" style="width: 50px; height: 70px"></a>
@@ -48,14 +54,44 @@
                         @item.Product.ProductName
                     </td>
                     <td>
-                        <input type="number" class="form-control" value="@item.Quantity" />
+                        <input type="number" class="form-control quantity-input" value="@item.Quantity" data-price="@item.Product.Price" />
+                    </td>
+                    <td class="price-column">
+                        @totalPrice $
                     </td>
                     <td>
-                         <a style="outline:none" href="~/Globals/Products/DetailGlobal/@item.Product.ProductId">Detail</a>
+                        <a style="outline:none" href="~/Globals/Products/DetailGlobal/@item.Product.ProductId">Detail</a>
                     </td>
                 </tr>
             }
         </tbody>
     </table>
+    <h2>Total Price : <span id="totalDisplay">@Model.Total</span> $</h2>
     <a class="btn btn-primary mt-3">Add to cart</a>
 </div>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            // Update the prices and total when the quantity inputs change
+            $('.quantity-input').on('input', function () {
+                var quantity = $(this).val();
+                var price = $(this).data('price');
+                var totalPrice = parseFloat(quantity) * parseFloat(price);
+
+                // Find the corresponding price column and update its text
+                var priceColumn = $(this).closest('tr').find('.price-column');
+                priceColumn.text(price + ' $');
+
+                // Recalculate and update the total price
+                var total = 0;
+                $('.quantity-input').each(function () {
+                    var quantity = $(this).val();
+                    var price = $(this).data('price');
+                    total += parseFloat(quantity) * parseFloat(price);
+                });
+
+                $('#totalDisplay').text(total.toFixed(2));
+            });
+        });
+    </script>
+}

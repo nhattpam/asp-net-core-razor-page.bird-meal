@@ -13,6 +13,9 @@ namespace BirdMeal.Pages.Globals.Meals
         public IEnumerable<MealProductViewModel> MealDetail { get; set; }
         [BindProperty]
         public MealViewModel MealModel { get; set; }
+
+        [BindProperty]
+        public float? Total { get; set; }
         public DetailGlobalModel()
         {
             mealProductRepository = new MealProductRepository();
