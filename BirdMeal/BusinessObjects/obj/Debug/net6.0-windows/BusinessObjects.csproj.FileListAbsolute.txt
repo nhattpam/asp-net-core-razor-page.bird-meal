@@ -40,3 +40,17 @@ F:\FPT_SUBJECTS\Semester_7\PRN221\BirdMeal\BusinessObjects\obj\Debug\net6.0-wind
 F:\FPT_SUBJECTS\Semester_7\PRN221\BirdMeal\BusinessObjects\obj\Debug\net6.0-windows\BusinessObjects.pdb
 F:\FPT_SUBJECTS\Semester_7\PRN221\BirdMeal\BusinessObjects\obj\Debug\net6.0-windows\BusinessObjects.genruntimeconfig.cache
 F:\FPT_SUBJECTS\Semester_7\PRN221\BirdMeal\BusinessObjects\obj\Debug\net6.0-windows\ref\BusinessObjects.dll
+D:\SUMMER2023\PRN221\birdmeal\asp-net-core-razor-page.bird-meal\BirdMeal\BusinessObjects\bin\Debug\net6.0-windows\BusinessObjects.deps.json
+D:\SUMMER2023\PRN221\birdmeal\asp-net-core-razor-page.bird-meal\BirdMeal\BusinessObjects\bin\Debug\net6.0-windows\BusinessObjects.runtimeconfig.json
+D:\SUMMER2023\PRN221\birdmeal\asp-net-core-razor-page.bird-meal\BirdMeal\BusinessObjects\bin\Debug\net6.0-windows\BusinessObjects.dll
+D:\SUMMER2023\PRN221\birdmeal\asp-net-core-razor-page.bird-meal\BirdMeal\BusinessObjects\bin\Debug\net6.0-windows\BusinessObjects.pdb
+D:\SUMMER2023\PRN221\birdmeal\asp-net-core-razor-page.bird-meal\BirdMeal\BusinessObjects\obj\Debug\net6.0-windows\BusinessObjects.csproj.AssemblyReference.cache
+D:\SUMMER2023\PRN221\birdmeal\asp-net-core-razor-page.bird-meal\BirdMeal\BusinessObjects\obj\Debug\net6.0-windows\BusinessObjects.GeneratedMSBuildEditorConfig.editorconfig
+D:\SUMMER2023\PRN221\birdmeal\asp-net-core-razor-page.bird-meal\BirdMeal\BusinessObjects\obj\Debug\net6.0-windows\BusinessObjects.AssemblyInfoInputs.cache
+D:\SUMMER2023\PRN221\birdmeal\asp-net-core-razor-page.bird-meal\BirdMeal\BusinessObjects\obj\Debug\net6.0-windows\BusinessObjects.AssemblyInfo.cs
+D:\SUMMER2023\PRN221\birdmeal\asp-net-core-razor-page.bird-meal\BirdMeal\BusinessObjects\obj\Debug\net6.0-windows\BusinessObjects.csproj.CoreCompileInputs.cache
+D:\SUMMER2023\PRN221\birdmeal\asp-net-core-razor-page.bird-meal\BirdMeal\BusinessObjects\obj\Debug\net6.0-windows\BusinessObjects.dll
+D:\SUMMER2023\PRN221\birdmeal\asp-net-core-razor-page.bird-meal\BirdMeal\BusinessObjects\obj\Debug\net6.0-windows\refint\BusinessObjects.dll
+D:\SUMMER2023\PRN221\birdmeal\asp-net-core-razor-page.bird-meal\BirdMeal\BusinessObjects\obj\Debug\net6.0-windows\BusinessObjects.pdb
+D:\SUMMER2023\PRN221\birdmeal\asp-net-core-razor-page.bird-meal\BirdMeal\BusinessObjects\obj\Debug\net6.0-windows\BusinessObjects.genruntimeconfig.cache
+D:\SUMMER2023\PRN221\birdmeal\asp-net-core-razor-page.bird-meal\BirdMeal\BusinessObjects\obj\Debug\net6.0-windows\ref\BusinessObjects.dll
