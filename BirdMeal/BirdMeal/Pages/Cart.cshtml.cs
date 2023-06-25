@@ -177,6 +177,21 @@ namespace BirdMeal.Pages
             }
             return -1;
         }
-    }
+
+
+		public IActionResult OnPostRemoveFromCart(string cartId)
+		{
+			var cartItems = _httpContextAccessor.HttpContext.Session.Get<List<CartViewModel>>("cart") ?? new List<CartViewModel>();
+			var itemToRemove = cartItems.FirstOrDefault(c => c.cartId == cartId);
+
+			if (itemToRemove != null)
+			{
+				cartItems.Remove(itemToRemove);
+				_httpContextAccessor.HttpContext.Session.Set("cart", cartItems);
+			}
+
+			return RedirectToPage("/Cart");
+		}
+	}
 
 }

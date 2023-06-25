@@ -2,7 +2,26 @@
 @model BirdMeal.Pages.CartModel
 @{
 }
+<style>
 
+	.checkout-right-basket button {
+		padding: 10px 20px 10px 18px;
+		color: #fff;
+		font-size: 1em;
+		background: #212121;
+		text-decoration: none;
+	}
+
+		.checkout-right-basket button:hover {
+			background: #84c639;
+		}
+
+		.checkout-right-basket button span {
+			left: -.5em;
+			top: 0.1em;
+		}
+
+</style>
 
 <!-- products-breadcrumb -->
 <div class="products-breadcrumb" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 999; ">
@@ -107,9 +126,10 @@
 									<td class="invert">
 										<div class="quantity">
 											<div class="input-group w-auto justify-content-end align-items-center">
-												<input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="@cart.quantity">
+												<input type="button" value="-" class="button-minus border rounded-circle icon-shape icon-sm mx-1" data-field="@cart.quantity">
 												<input type="number" step="1" max="10" value="1" name="quantity" class="quantity-field border-0 text-center w-25">
-												<input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " data-field="@cart.quantity">
+												<input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm" data-field="@cart.quantity">
+
 											</div>
 										</div>
 									</td>
@@ -118,7 +138,9 @@
 									<td class="invert">@cart.price</td>
 									<td class="invert">
 										<div class="rem">
-											<div class="close1"> </div>
+											<form method="post" asp-page-handler="RemoveFromCart" asp-route-cartId="@cart.cartId">
+												<button type="submit" class="close1" aria-label="Remove"></button>
+											</form>
 										</div>
 
 									</td>
@@ -183,7 +205,14 @@
 						</section>
 					</form>
 					<div class="checkout-right-basket">
-						<a href="payment.html">Make a Payment <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+						@if (Model.CartItems != null && Model.CartItems.Any())
+						{
+							<a href="payment.html">Make a Payment <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+						}
+						else
+						{
+							<button disabled>Make a Payment <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+						}
 					</div>
 				</div>
 
@@ -199,38 +228,25 @@
 <!-- //banner -->
 @section Scripts {
 	<script>
-		function incrementValue(e) {
-			e.preventDefault();
-			var fieldName = $(e.target).data('field');
-			var parent = $(e.target).closest('div');
-			var currentVal = parseInt(parent.find('input[name=' + fieldName + ']').val(), 10);
+		$(document).ready(function () {
+			$('.button-plus').click(function () {
+				var inputField = $(this).siblings('.quantity-field');
+				var currentValue = parseInt(inputField.val());
 
-			if (!isNaN(currentVal)) {
-				parent.find('input[name=' + fieldName + ']').val(currentVal + 1);
-			} else {
-				parent.find('input[name=' + fieldName + ']').val(0);
-			}
-		}
+				if (!isNaN(currentValue)) {
+					inputField.val(currentValue + 1);
+				}
+			});
 
-		function decrementValue(e) {
-			e.preventDefault();
-			var fieldName = $(e.target).data('field');
-			var parent = $(e.target).closest('div');
-			var currentVal = parseInt(parent.find('input[name=' + fieldName + ']').val(), 10);
+			$('.button-minus').click(function () {
+				var inputField = $(this).siblings('.quantity-field');
+				var currentValue = parseInt(inputField.val());
 
-			if (!isNaN(currentVal) && currentVal > 0) {
-				parent.find('input[name=' + fieldName + ']').val(currentVal - 1);
-			} else {
-				parent.find('input[name=' + fieldName + ']').val(0);
-			}
-		}
-
-		$('.input-group').on('click', '.button-plus', function (e) {
-			incrementValue(e);
-		});
-
-		$('.input-group').on('click', '.button-minus', function (e) {
-			decrementValue(e);
+				if (!isNaN(currentValue) && currentValue > 1) {
+					inputField.val(currentValue - 1);
+				}
+			});
 		});
 	</script>
+
 }

@@ -240,3 +240,4 @@ D:\SUMMER2023\PRN221\birdmeal\asp-net-core-razor-page.bird-meal\BirdMeal\BirdMea
 D:\SUMMER2023\PRN221\birdmeal\asp-net-core-razor-page.bird-meal\BirdMeal\BirdMeal\obj\Debug\net6.0-windows\BirdMeal.genruntimeconfig.cache
 D:\SUMMER2023\PRN221\birdmeal\asp-net-core-razor-page.bird-meal\BirdMeal\BirdMeal\obj\Debug\net6.0-windows\ref\BirdMeal.dll
 D:\SUMMER2023\PRN221\birdmeal\asp-net-core-razor-page.bird-meal\BirdMeal\BirdMeal\bin\Debug\net6.0-windows\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+F:\FPT_SUBJECTS\Semester_7\PRN221\Project\asp-net-core-razor-page.bird-meal\BirdMeal\BirdMeal\bin\Debug\net6.0-windows\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
