@@ -127,7 +127,7 @@
 										<div class="quantity">
 											<div class="input-group w-auto justify-content-end align-items-center">
 												<input type="button" value="-" class="button-minus border rounded-circle icon-shape icon-sm mx-1" data-field="@cart.quantity">
-												<input type="number" step="1" max="10" value="1" name="quantity" class="quantity-field border-0 text-center w-25">
+												<input type="number" step="1" max="10" value="@cart.quantity"  class="quantity-field border-0 text-center w-25">
 												<input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm" data-field="@cart.quantity">
 
 											</div>
@@ -155,16 +155,6 @@
 				</table>
 			</div>
 			<div class="checkout-left">
-				<div class="col-md-4 checkout-left-basket">
-					<h4>Continue to basket</h4>
-					<ul>
-						<li>Product1 <i>-</i> <span>$15.00 </span></li>
-						<li>Product2 <i>-</i> <span>$25.00 </span></li>
-						<li>Product3 <i>-</i> <span>$29.00 </span></li>
-						<li>Total Service Charges <i>-</i> <span>$15.00</span></li>
-						<li>Total <i>-</i> <span>$84.00</span></li>
-					</ul>
-				</div>
 				<div class="col-md-8 address_form_agile">
 					<h4>Add a new Details</h4>
 					<form action="payment.html" method="post" class="creditly-card-form agileinfo_form">
