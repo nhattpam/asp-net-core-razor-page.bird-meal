@@ -60,7 +60,7 @@ namespace BirdMeal.Pages
             return RedirectToPage("/Login");
         }
 
-        public IActionResult OnPostAddToCart(int userId, string mealId, float? total)
+        public IActionResult OnPostAddToCart(int userId, string mealId, float? total, Dictionary<int, int> quantity, Dictionary<int, int> productQuantity)
         {
             string loginMem = HttpContext.Session.GetString("loginMem");
             if (loginMem != null)
@@ -70,6 +70,7 @@ namespace BirdMeal.Pages
                 {
                     Meal meal = mealRepository.GeMealById(mealId);
                     var cartItems = _httpContextAccessor.HttpContext.Session.Get<List<CartViewModel>>("cart") ?? new List<CartViewModel>();
+
                     if (cartItems.Count == 0)
                     {
                         CartViewModel cart = new CartViewModel()
@@ -100,6 +101,24 @@ namespace BirdMeal.Pages
                         {
                             cartItems[index].quantity++;
                             cartItems[index].price = (float?) meal.TotalCost * cartItems[index].quantity;
+                            //// Check if the quantity exceeds the product quantity
+                            //// Retrieve the quantity and productQuantity dictionaries from the POST data
+                            //var quantity = Request.Form["quantity"].ToDictionary(k => int.Parse(k.Key), v => int.Parse(v.Value));
+                            //var productQuantity = Request.Form["productQuantity"].ToDictionary(k => int.Parse(k.Key), v => int.Parse(v.Value));
+                            //int productId = Int32.Parse(cartItems[index].Meal.MealId); // Assuming the MealId property represents the product ID
+
+                            //if (quantity.ContainsKey(productId) && productQuantity.ContainsKey(productId))
+                            //{
+                            //    int itemQuantity = quantity[productId];
+                            //    int productQuantityAvailable = productQuantity[productId];
+
+                            //    if (cartItems[index].quantity * itemQuantity > productQuantityAvailable)
+                            //    {
+                            //        ModelState.AddModelError(string.Empty, "Exceeded quantity");
+                            //        // Display the "exceeded quantity" message or handle the situation accordingly
+                            //        return Page();
+                            //    }
+                            //}
                         }
                         _httpContextAccessor.HttpContext.Session.Set("cart", cartItems);
                     }

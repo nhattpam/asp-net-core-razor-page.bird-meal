@@ -1,6 +1,7 @@
 ﻿@page
 @model BirdMeal.Pages.CartModel
 @{
+
 }
 <style>
 
@@ -127,15 +128,14 @@
 										<div class="quantity">
 											<div class="input-group w-auto justify-content-end align-items-center">
 												<input type="button" value="-" class="button-minus border rounded-circle icon-shape icon-sm mx-1" data-field="@cart.quantity">
-												<input type="number" step="1" max="10" value="@cart.quantity"  class="quantity-field border-0 text-center w-25">
+												<input type="number" step="1" max="10" value="@cart.quantity" class="quantity-field border-0 text-center w-25" data-price="@cart.price">
 												<input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm" data-field="@cart.quantity">
-
 											</div>
 										</div>
 									</td>
 									<td class="invert">@item.MealId</td>
 
-									<td class="invert">@cart.price</td>
+									<td class="invert price">@cart.price</td>
 									<td class="invert">
 										<div class="rem">
 											<form method="post" asp-page-handler="RemoveFromCart" asp-route-cartId="@cart.cartId">
@@ -152,6 +152,13 @@
 						}
 						
 					</tbody>
+					<tfoot>
+						<tr>
+							<td colspan="4"></td>
+							<td>Total Price:</td>
+							<td id="total-price"></td>
+						</tr>
+					</tfoot>
 				</table>
 			</div>
 			<div class="checkout-left">
@@ -197,6 +204,7 @@
 					<div class="checkout-right-basket">
 						@if (Model.CartItems != null && Model.CartItems.Any())
 						{
+
 							<a href="payment.html">Make a Payment <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
 						}
 						else
@@ -219,12 +227,25 @@
 @section Scripts {
 	<script>
 		$(document).ready(function () {
+			// Retrieve the product quantity dictionary from the hidden input fields
+			var productQuantity = {};
+			$('input[name^="productQuantity"]').each(function () {
+				var productId = parseInt($(this).attr('name').match(/\d+/)[0]);
+				var quantity = parseInt($(this).val());
+				productQuantity[productId] = quantity;
+				
+			});
+			console.log(productQuantity);
+
+			
 			$('.button-plus').click(function () {
 				var inputField = $(this).siblings('.quantity-field');
 				var currentValue = parseInt(inputField.val());
 
 				if (!isNaN(currentValue)) {
 					inputField.val(currentValue + 1);
+					checkQuantity(inputField);
+					updatePrice(inputField);
 				}
 			});
 
@@ -234,8 +255,73 @@
 
 				if (!isNaN(currentValue) && currentValue > 1) {
 					inputField.val(currentValue - 1);
+					checkQuantity(inputField);
+					updatePrice(inputField);
 				}
 			});
+
+			$('.quantity-field').change(function () {
+				var inputField = $(this);
+				checkQuantity(inputField);
+				updatePrice(inputField);
+			});
+
+			function checkQuantity(inputField) {
+				var quantity = parseInt(inputField.val());
+				var maxQuantity = parseInt(inputField.attr('max'));
+				var productId = parseInt(inputField.data('product-id'));
+
+				if (!isNaN(quantity) && !isNaN(maxQuantity) && quantity > maxQuantity) {
+					var exceedsMessage = inputField.closest('tr').find('.exceeds-message');
+					if (!exceedsMessage.length) {
+						exceedsMessage = $('<span class="exceeds-message text-danger">Exceeds available quantity!</span>');
+						inputField.after(exceedsMessage);
+					} else {
+						exceedsMessage.show();
+					}
+				} else {
+					inputField.closest('tr').find('.exceeds-message').hide();
+				}
+
+				if (!isNaN(productId) && quantity && productQuantity[productId]) {
+					var totalQuantity = quantity;
+					var productQuantityAvailable = productQuantity[productId];
+
+					if (totalQuantity > productQuantityAvailable) {
+						var exceedsMessage = inputField.closest('tr').find('.exceeds-message');
+						if (!exceedsMessage.length) {
+							exceedsMessage = $('<span class="exceeds-message text-danger">Exceeded quantity!</span>');
+							inputField.after(exceedsMessage);
+						} else {
+							exceedsMessage.show();
+						}
+					} else {
+						inputField.closest('tr').find('.exceeds-message').hide();
+					}
+				}
+			}
+
+			function updatePrice(inputField) {
+				var quantity = parseInt(inputField.val());
+				var price = parseFloat(inputField.data('price'));
+				var totalPrice = quantity * price;
+				inputField.closest('tr').find('.price').text(totalPrice.toFixed(2));
+				calculateTotalPrice();
+			}
+
+			// Calculate the total price
+			function calculateTotalPrice() {
+				var totalPrice = 0;
+				$('.quantity-field').each(function () {
+					var quantity = parseInt($(this).val());
+					var price = parseFloat($(this).data('price'));
+					var subtotal = quantity * price;
+					totalPrice += subtotal;
+				});
+				$('#total-price').text(totalPrice.toFixed(2));
+			}
+
+			calculateTotalPrice();
 		});
 	</script>
 

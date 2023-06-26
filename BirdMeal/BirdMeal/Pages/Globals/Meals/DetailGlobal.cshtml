@@ -69,20 +69,32 @@
                     <td>
                         <a style="outline:none" href="~/Globals/Products/DetailGlobal/@item.Product.ProductId">Detail</a>
                     </td>
+                   
                 </tr>
+            
             }
+
         </tbody>
     </table>
     <h2>Total Price : <span id="totalDisplay">@Model.Total</span> $</h2>
     <div class="alert alert-danger" role="alert" style="display: none">
         Quantity exceeded for some products.
     </div>
+
     <form asp-page="/Cart" method="post" asp-page-handler="AddToCart">
-        <input type="hidden" name="userId" asp-for="@Model.UserId" />
-        <input type="hidden" name="total" asp-for="@Model.Total" />
-        <input type="hidden" name="mealId" asp-for="@Model.MealModel.MealId" />
-        <button class="btn btn-primary mt-3" type="submit">Add to cart</button>
-    </form>
+    <input type="hidden" name="userId" asp-for="@Model.UserId" />
+    <input type="hidden" name="total" asp-for="@Model.Total" />
+    <input type="hidden" name="mealId" asp-for="@Model.MealModel.MealId" />
+
+    @foreach (var item in Model.MealDetail)
+    {
+        <input type="hidden" name="quantity[@item.Product.ProductId]" value="@item.Quantity" />
+        <input type="hidden" name="productQuantity[@item.Product.ProductId]" value="@item.Product.Quantity" />
+    }
+
+    <button class="btn btn-primary mt-3" type="submit">Add to cart</button>
+</form>
+    
 </div>
 @section Scripts {
     <script>
