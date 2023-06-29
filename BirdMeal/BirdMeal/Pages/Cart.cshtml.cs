@@ -46,6 +46,7 @@ namespace BirdMeal.Pages
                         Phone = u.Phone,
                         Email = u.Email,
                         Address = u.Address,
+                        WalletId = u.WalletId,
                         Wallet = MapWalletToViewModel(u.Wallet),
                         FullName = u.FullName
                     };
@@ -128,7 +129,8 @@ namespace BirdMeal.Pages
                         Phone = u.Phone,
                         Email = u.Email,
                         Address = u.Address,
-                        Wallet = MapWalletToViewModel(u.Wallet),
+						WalletId = u.WalletId,
+						Wallet = MapWalletToViewModel(u.Wallet),
                         FullName = u.FullName
                     };
                     return RedirectToPage("/Cart");
@@ -139,6 +141,9 @@ namespace BirdMeal.Pages
                 return RedirectToPage("/Login");
             }
             return RedirectToPage("/Login");
+        }
+
+        public void OnPostCheckOut() { 
         }
         private MealViewModel MapMealToViewModel(Meal meal)
         {
