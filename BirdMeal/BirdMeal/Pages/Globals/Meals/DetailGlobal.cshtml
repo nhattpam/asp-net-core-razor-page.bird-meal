@@ -83,7 +83,7 @@
 
     <form asp-page="/Cart" method="post" asp-page-handler="AddToCart">
     <input type="hidden" name="userId" asp-for="@Model.UserId" />
-    <input type="hidden" name="total" asp-for="@Model.Total" />
+        <input type="hidden" name="total" id="hidden-total-price" asp-for="@Model.Total"/>
     <input type="hidden" name="mealId" asp-for="@Model.MealModel.MealId" />
 
     @foreach (var item in Model.MealDetail)
@@ -100,24 +100,11 @@
     <script>
         $(document).ready(function () {
             // Update the prices and total when the quantity inputs change
-            $('.quantity-input').on('input', function () {
-                var total = 0;
-                $('.quantity-input').each(function () {
-                    var quantity = $(this).val();
-                    var price = $(this).data('price');
-                    var totalPrice = parseFloat(quantity) * parseFloat(price);
-                    var priceColumn = $(this).closest('tr').find('.price-column');
-                    priceColumn.text(totalPrice.toFixed(2) + ' $');
-                    total += totalPrice;
-                });
-                $('#totalDisplay').text(total.toFixed(2));
-            });
-
-
             // Update the prices and total when the quantity inputs change
             $('.quantity-input').on('input', function () {
                 var total = 0;
                 var exceededQuantity = false;
+                var quantityChanged = false;
                 $('.quantity-input').each(function () {
                     var quantity = $(this).val();
                     var price = $(this).data('price');
@@ -133,9 +120,20 @@
                     } else {
                         $(this).closest('tr').find('.exceeded-quantity').hide();
                     }
+                    // Check if quantity has changed for any input
+                    if ($(this).val() !== $(this).data('original-value')) {
+                        quantityChanged = true;
+                    }
                 });
                 $('#totalDisplay').text(total.toFixed(2));
-
+                if (quantityChanged) {
+                    // If quantity has changed, use the calculated total
+                    $('#hidden-total-price').val(total.toFixed(2));
+                } else {
+                    // If quantity has not changed, use @Model.Total
+                    $('#hidden-total-price').val('@Model.Total');
+                }
+                
                 if (exceededQuantity) {
                     $('.alert-danger').show();
                     $('button[type="submit"]').prop('disabled', true);
@@ -143,7 +141,14 @@
                     $('.alert-danger').hide();
                     $('button[type="submit"]').prop('disabled', false);
                 }
+
             });
+            // Initialize the original values of quantity inputs
+            $('.quantity-input').each(function () {
+                $(this).data('original-value', $(this).val());
+            });
+           
         });
+
     </script>
 }
