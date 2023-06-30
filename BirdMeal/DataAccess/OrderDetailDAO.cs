@@ -1,4 +1,5 @@
 ﻿using BusinessObjects.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,15 +44,16 @@ namespace DataAccess
             }
         }
 
-        public OrderDetail GeIOrderDetailByOrderId(int orderlId)
+		public IEnumerable<OrderDetail> GetOrderDetailByOrderId(int orderId)
 		{
-			OrderDetail p = null;
+			IEnumerable<OrderDetail> os = null;
 
 			try
 			{
 
 				var context = new BirdMealContext();
-				p = context.OrderDetails.SingleOrDefault(f => f.OrderId.Equals(orderlId));
+				os = context.OrderDetails.Include(pro => pro.Meal)
+					.Where(c => c.OrderId == orderId);
 
 			}
 			catch (Exception ex)
@@ -59,7 +61,7 @@ namespace DataAccess
 				throw new Exception(ex.Message);
 			}
 
-			return p;
+			return os;
 		}
 	}
 }

@@ -15,10 +15,10 @@ namespace Repository.OrderDetailRepository
             OrderDetailDAO.Instance.AddOrderDetail(c);
         }
 
-		public OrderDetail GeIOrderDetailByOrderId(int orderlId)
+		public IEnumerable<OrderDetail> GetOrderDetailByOrderId(int orderId)
         {
-            return OrderDetailDAO.Instance.GeIOrderDetailByOrderId(orderlId);
-        }
+            return OrderDetailDAO.Instance.GetOrderDetailByOrderId(orderId);
+		}
 
 	}
 }

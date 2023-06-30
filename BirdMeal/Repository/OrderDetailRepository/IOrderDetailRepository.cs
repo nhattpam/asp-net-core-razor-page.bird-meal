@@ -10,7 +10,7 @@ namespace Repository.OrderDetailRepository
     public interface IOrderDetailRepository
     {
         public void AddOrderDetail(OrderDetail c);
-        public OrderDetail GeIOrderDetailByOrderId(int orderlId);
+        public IEnumerable<OrderDetail> GetOrderDetailByOrderId(int orderId);
 
 	}
 }

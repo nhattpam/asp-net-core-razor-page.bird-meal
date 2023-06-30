@@ -26,10 +26,11 @@ namespace BirdMeal.Pages
         public UserViewModel UserCart { get; set; }
 		[BindProperty]
 		public float Balance { get; set; }
-        public OrderViewModel Order { get; set; }
-        public OrderDetailViewModel OrderDetail { get; set; }   
+        public OrderViewModel OrderVM { get; set; }
+        public OrderDetailViewModel OrderDetailVM { get; set; }   
         private IOrderRepository orderRepository { get; set; }
         private IOrderDetailRepository orderDetailRepository { get; set; }
+        private IEnumerable<OrderDetail> ListOrderDetail { get; set; }
 
         public CartModel(IHttpContextAccessor httpContextAccessor)
         {
@@ -38,8 +39,8 @@ namespace BirdMeal.Pages
             userRepository = new UserRepository();
             UserCart = new UserViewModel();
             _httpContextAccessor = httpContextAccessor;
-            Order = new OrderViewModel();
-            OrderDetail = new OrderDetailViewModel();
+            OrderVM = new OrderViewModel();
+			OrderDetailVM = new OrderDetailViewModel();
             orderRepository = new OrderRepository();
             orderDetailRepository = new OrderDetailRepository();
 		}
@@ -138,7 +139,7 @@ namespace BirdMeal.Pages
             return RedirectToPage("/Login");
         }
 
-        public IActionResult OnPostCheckout(float totalPrice, string mealId, int quantityEachMeal, float? priceEachMeal)
+        public IActionResult OnPostCheckout(float totalPrice)
         {
 			string loginMem = HttpContext.Session.GetString("loginMem");
 			if (loginMem != null)
@@ -150,7 +151,7 @@ namespace BirdMeal.Pages
 					DateTime orderDate = DateTime.Now;
 					string status = "DANG CHO";
 
-					Order = new OrderViewModel()
+					OrderVM = new OrderViewModel()
 					{
 						UserId = userId,
 						OrderDate = orderDate,
@@ -158,21 +159,36 @@ namespace BirdMeal.Pages
 						Status = status
 					};
 
+                    Order order = new Order()
+                    {
+						UserId = OrderVM.UserId,
+                        OrderDate = OrderVM.OrderDate,
+                        TotalPrice = OrderVM.TotalPrice,
+                        Status = status
+                    };
+
+                    orderRepository.AddOrder(order);
+
 					
 					CartItems = _httpContextAccessor.HttpContext.Session.Get<List<CartViewModel>>("cart") ?? new List<CartViewModel>();
+                    
 					foreach (var item in CartItems)
                     {
-                        OrderDetail = new OrderDetailViewModel()
-                        {
-                            OrderId = Order.OrderId,
-                            MealId = item.Meal.MealId,
-                            Quantity = item.quantity,
-                            UnitPrice = item.price
-                        };
+						//ListOrderDetail = orderDetailRepository.GetOrderDetailByOrderId(order.OrderId);
+
+                            OrderDetail orderDetail = new OrderDetail()
+                            {
+                                OrderId = order.OrderId,
+                                Quantity = item.quantity,
+                                UnitPrice = item.price,
+                                MealId = item.Meal.MealId,
+                            };
+
+							orderDetailRepository.AddOrderDetail(orderDetail);
                     }
 
 
-					return Page();
+					return RedirectToPage("/Bill");
 				}
 			}
 			else

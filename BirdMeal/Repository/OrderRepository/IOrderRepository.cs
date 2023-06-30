@@ -10,6 +10,8 @@ namespace Repository.OrderRepository
     public interface IOrderRepository
     {
         public IEnumerable<Order> GetOrdersList();
+        public void AddOrder(Order c);
 
-    }
+
+	}
 }
