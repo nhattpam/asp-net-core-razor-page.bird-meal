@@ -159,6 +159,7 @@
 							<td colspan="4"></td>
 							<td>Total Price:</td>
 							<td id="total-price"></td>
+
 						</tr>
 					</tfoot>
 				</table>
@@ -170,9 +171,7 @@
 						<section class="creditly-wrapper wthree, w3_agileits_wrapper">
 							<div class="information-wrapper">
 								<div class="first-row form-group">
-									@{
-										var BalanceUser = @Model.UserCart.Wallet.Balance;
-									}
+									
 									<input type="hidden" asp-for="UserCart.UserId"/>
 									<div class="controls">
 										<label class="control-label">Full name: </label>
@@ -210,8 +209,8 @@
 					<div class="checkout-right-basket">
 						@if (Model.CartItems != null && Model.CartItems.Any())
 						{
-							<form asp-page-handler="/Checkout" method="post">
-
+							<form asp-page-handler="Checkout" method="post">
+								<input type="hidden" name="totalPrice" id="hidden-total-price" value=""/>
 								<button type="submit" id="payment-button" >Make a Payment <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
 							</form>
 						}
@@ -327,9 +326,10 @@
 					totalPrice += subtotal;
 				});
 				$('#total-price').text(totalPrice.toFixed(2));
+				$('#hidden-total-price').val(totalPrice.toFixed(2));
 				console.log(totalPrice);
-				console.log('@Model.UserCart.Wallet.Balance');
-				if (totalPrice > '@Model.UserCart.Wallet.Balance'){
+				console.log('@Model.Balance');
+				if (totalPrice > '@Model.Balance') {
 					$('#payment-button').hide();
 					alert('Not enough balance. Please update your balance.');
 				} else {

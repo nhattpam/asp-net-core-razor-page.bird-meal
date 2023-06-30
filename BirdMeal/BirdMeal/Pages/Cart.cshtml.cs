@@ -22,6 +22,8 @@ namespace BirdMeal.Pages
         private IMealProductRepository mealProductRepository { get; set; }
         [BindProperty]
         public UserViewModel UserCart { get; set; }
+		[BindProperty]
+		public float Balance { get; set; }
 
         public CartModel(IHttpContextAccessor httpContextAccessor)
         {
@@ -50,6 +52,7 @@ namespace BirdMeal.Pages
                         Wallet = MapWalletToViewModel(u.Wallet),
                         FullName = u.FullName
                     };
+                    Balance = float.Parse(UserCart.Wallet.Balance.ToString());
 
                     return Page();
                 }
@@ -143,7 +146,8 @@ namespace BirdMeal.Pages
             return RedirectToPage("/Login");
         }
 
-        public void OnPostCheckOut() { 
+        public void OnPostCheckout(float totalPrice)
+        { 
         }
         private MealViewModel MapMealToViewModel(Meal meal)
         {
