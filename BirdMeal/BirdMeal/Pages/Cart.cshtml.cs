@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Repository.MealProductRepository;
 using Repository.MealRepository;
+using Repository.OrderDetailRepository;
+using Repository.OrderRepository;
 using Repository.UserRepository;
 using System.Linq.Expressions;
 using System.Windows;
@@ -24,6 +26,10 @@ namespace BirdMeal.Pages
         public UserViewModel UserCart { get; set; }
 		[BindProperty]
 		public float Balance { get; set; }
+        public OrderViewModel Order { get; set; }
+        public OrderDetailViewModel OrderDetail { get; set; }   
+        private IOrderRepository orderRepository { get; set; }
+        private IOrderDetailRepository orderDetailRepository { get; set; }
 
         public CartModel(IHttpContextAccessor httpContextAccessor)
         {
@@ -32,7 +38,11 @@ namespace BirdMeal.Pages
             userRepository = new UserRepository();
             UserCart = new UserViewModel();
             _httpContextAccessor = httpContextAccessor;
-        }
+            Order = new OrderViewModel();
+            OrderDetail = new OrderDetailViewModel();
+            orderRepository = new OrderRepository();
+            orderDetailRepository = new OrderDetailRepository();
+		}
         public IActionResult OnGet()
         {
             string loginMem = HttpContext.Session.GetString("loginMem");
@@ -105,24 +115,6 @@ namespace BirdMeal.Pages
                         {
                             cartItems[index].quantity++;
                             cartItems[index].price = (float?) meal.TotalCost * cartItems[index].quantity;
-                            //// Check if the quantity exceeds the product quantity
-                            //// Retrieve the quantity and productQuantity dictionaries from the POST data
-                            //var quantity = Request.Form["quantity"].ToDictionary(k => int.Parse(k.Key), v => int.Parse(v.Value));
-                            //var productQuantity = Request.Form["productQuantity"].ToDictionary(k => int.Parse(k.Key), v => int.Parse(v.Value));
-                            //int productId = Int32.Parse(cartItems[index].Meal.MealId); // Assuming the MealId property represents the product ID
-
-                            //if (quantity.ContainsKey(productId) && productQuantity.ContainsKey(productId))
-                            //{
-                            //    int itemQuantity = quantity[productId];
-                            //    int productQuantityAvailable = productQuantity[productId];
-
-                            //    if (cartItems[index].quantity * itemQuantity > productQuantityAvailable)
-                            //    {
-                            //        ModelState.AddModelError(string.Empty, "Exceeded quantity");
-                            //        // Display the "exceeded quantity" message or handle the situation accordingly
-                            //        return Page();
-                            //    }
-                            //}
                         }
                         _httpContextAccessor.HttpContext.Session.Set("cart", cartItems);
                     }
@@ -146,8 +138,50 @@ namespace BirdMeal.Pages
             return RedirectToPage("/Login");
         }
 
-        public void OnPostCheckout(float totalPrice)
-        { 
+        public IActionResult OnPostCheckout(float totalPrice, string mealId, int quantityEachMeal, float? priceEachMeal)
+        {
+			string loginMem = HttpContext.Session.GetString("loginMem");
+			if (loginMem != null)
+			{
+				User u = userRepository.GetUserByEmail(loginMem);
+				if (u != null && u.Role.Equals("CUSTOMER"))
+				{
+					int userId = u.UserId;
+					DateTime orderDate = DateTime.Now;
+					string status = "DANG CHO";
+
+					Order = new OrderViewModel()
+					{
+						UserId = userId,
+						OrderDate = orderDate,
+						TotalPrice = totalPrice,
+						Status = status
+					};
+
+					
+					CartItems = _httpContextAccessor.HttpContext.Session.Get<List<CartViewModel>>("cart") ?? new List<CartViewModel>();
+					foreach (var item in CartItems)
+                    {
+                        OrderDetail = new OrderDetailViewModel()
+                        {
+                            OrderId = Order.OrderId,
+                            MealId = item.Meal.MealId,
+                            Quantity = item.quantity,
+                            UnitPrice = item.price
+                        };
+                    }
+
+
+					return Page();
+				}
+			}
+			else
+			{
+				return RedirectToPage("/Login");
+			}
+			return RedirectToPage("/Login");
+			
+
         }
         private MealViewModel MapMealToViewModel(Meal meal)
         {

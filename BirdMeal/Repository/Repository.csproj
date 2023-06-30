@@ -8,8 +8,6 @@
 
   <ItemGroup>
     <Folder Include="BillRepository\" />
-    <Folder Include="OrderDetailRepository\" />
-    <Folder Include="OrderRepository\" />
   </ItemGroup>
 
   <ItemGroup>
