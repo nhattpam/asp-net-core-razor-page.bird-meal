@@ -57,7 +57,7 @@
                         @item.Product.ProductName
                     </td>
                     <td>
-                        <input type="number" class="form-control quantity-input" value="@item.Quantity" data-price="@item.Product.Price" max="@item.Product.Quantity" />
+                        <input min="1" type="number" class="form-control quantity-input" value="@item.Quantity" data-price="@item.Product.Price" max="@item.Product.Quantity" />
                         @if (exceededQuantityClass != string.Empty)
                         {
                             <span class="@exceededQuantityClass">Quantity exceeded</span>
