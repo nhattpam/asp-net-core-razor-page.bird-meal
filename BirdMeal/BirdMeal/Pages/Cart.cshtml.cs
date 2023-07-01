@@ -184,8 +184,19 @@ namespace BirdMeal.Pages
                                 MealId = item.Meal.MealId,
                             };
 
-							orderDetailRepository.AddOrderDetail(orderDetail);
-                    }
+						orderDetailRepository.AddOrderDetail(orderDetail);
+
+						
+					}
+					// Update the user's balance
+					u.Wallet.Balance -= totalPrice;
+					u.Wallet.TransactionDate = DateTime.Now;
+
+                    userRepository.UpdateUser(u);
+
+                    //clear cart
+					_httpContextAccessor.HttpContext.Session.Remove("cart");
+
 
 
 					return RedirectToPage("/Bill");
