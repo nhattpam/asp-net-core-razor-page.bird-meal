@@ -1,4 +1,5 @@
 ﻿using BusinessObjects.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,7 +37,7 @@ namespace DataAccess
             {
                 var context = new BirdMealContext();
                 // Get From Database
-                orders = context.Orders;
+                orders = context.Orders.Include(o => o.User);
 
             }
             catch (Exception ex)
