@@ -1,6 +1,7 @@
 ﻿@page
 @model BirdMeal.Pages.Admins.Accounts.AddAccountModel
 @{
+    ViewData["Title"] = "Admin - Add Account";
     Layout = "~/Pages/Shared/AdminLayout.cshtml";
     var MessageFailed = ViewData["MessageFailed"]?.ToString();
     var MessageSuccess = ViewData["MessageSuccess"]?.ToString();

@@ -1,6 +1,7 @@
 ﻿@page "{id}"
 @model BirdMeal.Pages.Staffs.Products.EditProductModel
 @{
+    ViewData["Title"] = "Staff - Edit Product";
     Layout = "~/Pages/Shared/StaffLayout.cshtml";
     var EditSuccessMessage = ViewData["EditSuccessMessage"]?.ToString();
     var EditErrorMessage = ViewData["EditErrorMessage"]?.ToString();

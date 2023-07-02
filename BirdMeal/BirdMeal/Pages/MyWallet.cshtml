@@ -1,6 +1,7 @@
 ﻿@page "{id}"
 @model BirdMeal.Pages.MyWalletModel
 @{
+    ViewData["Title"] = "My Wallet";
     var MessageSuccess = ViewData["EditSuccessMessage"]?.ToString();
     var MessageError = ViewData["EditErrorMessage"]?.ToString();
 }
