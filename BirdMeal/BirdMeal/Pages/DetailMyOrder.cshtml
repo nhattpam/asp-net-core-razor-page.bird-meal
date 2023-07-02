@@ -1,0 +1,27 @@
+﻿@page "{id}"
+@model BirdMeal.Pages.DetailMyOrderModel
+@{
+    ViewData["Title"] = "Detail Order";
+}
+<h1 class="mb-3">Detail Order @Model.orderViewModel.OrderId</h1>
+<table class="table">
+    <thead>
+        <tr>
+            @*<th>OrderId</th>*@
+            <th>Meal</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.OrdeDetailModel)
+        {
+            <tr>
+                @*<td>@item.OrderId</td>*@
+                <td>@item.MealId</td>
+                <td>@item.UnitPrice</td>
+                <td>@item.Quantity</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -11,7 +11,8 @@ namespace Repository.OrderRepository
     {
         public IEnumerable<Order> GetOrdersList();
         public void AddOrder(Order c);
+        public IEnumerable<Order> GetOrders(int customerId);
 
 
-	}
+    }
 }

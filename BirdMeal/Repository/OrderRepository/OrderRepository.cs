@@ -18,5 +18,9 @@ namespace Repository.OrderRepository
         {
             OrderDAO.Instance.AddOrder(c);
         }
+        public IEnumerable<Order> GetOrders(int customerId)
+        {
+            return OrderDAO.Instance.GetOrders(customerId);
+        }
     }
 }

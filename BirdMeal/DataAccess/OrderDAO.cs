@@ -62,5 +62,25 @@ namespace DataAccess
                 throw new Exception(ex.Message);
             }
         }
+
+        public IEnumerable<Order> GetOrders(int customerId)
+        {
+            IEnumerable<Order> os = null;
+
+            try
+            {
+
+                var context = new BirdMealContext();
+                os = context.Orders.Include(pro => pro.User)
+                    .Where(c => c.UserId == customerId);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return os;
+        }
     }
 }

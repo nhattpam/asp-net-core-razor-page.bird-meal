@@ -3,3 +3,28 @@
 @{
     ViewData["Title"] = "My Order";
 }
+
+<h1 class="mb-3">List of Orders</h1>
+<table class="table text-success">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Order Date</th>
+            <th>Total</th>
+            <th>Status</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Orders)
+        {
+            <tr>
+                <td>@item.OrderId</td>
+                <td>@item.OrderDate</td>
+                <td>@item.TotalPrice</td>
+                <td>@item.Status</td>
+                <td><a class="btn btn-outline-dark" href="~/DetailMyOrder/@item.OrderId">Detail</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
