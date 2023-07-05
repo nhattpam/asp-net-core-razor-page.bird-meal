@@ -15,7 +15,7 @@
                 <th>Customer</th>
                 <th>Order Date</th>
                 <th>Total</th>
-                <th>Status</th>
+                @*<th>Status</th>*@
                 <th></th>
             </tr>
         </thead>
@@ -26,8 +26,8 @@
                     <td>@item.OrderId</td>
                     <td>@item.User.FullName</td>
                     <td>@item.OrderDate</td>
-                    <td>@item.TotalPrice</td>
-                    <td>@item.Status</td>
+                    <td>@item.TotalPrice $</td>
+                    @*<td>@item.Status</td>*@
                     <td><a class="btn btn-outline-dark" href="DetailOrder/@item.OrderId">Detail</a></td>
                 </tr>
             }

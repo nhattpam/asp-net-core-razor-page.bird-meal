@@ -8,21 +8,26 @@
 <table class="table text-success">
     <thead>
         <tr>
-            <th>Id</th>
+            <th></th>
+            <th>Order Id</th>
             <th>Order Date</th>
             <th>Total</th>
-            <th>Status</th>
+            @*<th>Status</th>*@
             <th></th>
         </tr>
     </thead>
     <tbody>
+        @{
+            var index = 1;
+        }
         @foreach (var item in Model.Orders)
         {
             <tr>
+                <td>@(index++)</td>
                 <td>@item.OrderId</td>
                 <td>@item.OrderDate</td>
-                <td>@item.TotalPrice</td>
-                <td>@item.Status</td>
+                <td>@item.TotalPrice $</td>
+                @*<td>@item.Status</td>*@
                 <td><a class="btn btn-outline-dark" href="~/DetailMyOrder/@item.OrderId">Detail</a></td>
             </tr>
         }
